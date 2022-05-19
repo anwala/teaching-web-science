@@ -3,7 +3,7 @@
 ## Links
 
 * [Syllabus](syllabus.md)
-* [Course Materials on Blackboard](https://www.blackboard.odu.edu/ultra/courses/_385456_1/cl/outline)
+<!--* [Course Materials on Blackboard](https://www.blackboard.odu.edu/ultra/courses/_385456_1/cl/outline)
 * [Lecture Slides](https://drive.google.com/drive/u/1/folders/15aiAezMGhnHdVwOO6qDqVyDn1JxHPd5o) (Google  Drive folder)
 
 ## Summary Schedule
@@ -26,3 +26,4 @@
 |13|Mon, Nov 29|Document Filtering (Classification)|[PCI Ch6 (Document Filtering) code examples](432_F21_PCI_Ch06.ipynb)<br/>[HW9](HW9.md) - Email Classification|
 |14|Dec 3|kNN and Algorithm Summary|[PCI Ch8 (Building Price Models) code examples](432_F21_PCI_Ch08.ipynb)|
 || Fri, Dec 10|*last day of classes*
+-->
