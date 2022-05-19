@@ -174,15 +174,15 @@ Among the most significant traditions of William & Mary is its student-administe
 The Honor Code is an enduring tradition at the University with documented history that originates as far back as 1736. Today, students administer the Honor pledge to each incoming student and educate faculty and administration on the relevance of the Code and its application to students' lives at the University. Students administer the Code through six Honor Councils and the Council of Chairs.
 
 The Honor Code prohibits lying, cheating, and stealing. For definitions of each offense, view [Section VI: Infractions](https://www.wm.edu/offices/deanofstudents/services/communityvalues/studenthandbook/honor_system/section_VI/index.php) of the Honor Code.
-* Lying: the presentation of false information with the intent to deceive.
-* Cheating: including, but not limited to, the following acts: 
-** Plagiarism
-** Unauthorized Assistance/Collaboration
-** Use of Unauthorized Materials
-** Unauthorized Dual Submission of Previous Academic Work
-** Time Constraint Violation
-** Directions Violation
-* Stealing: knowingly taking or appropriating the property of another, including property of the university, without the rightful owner’s permission and with the intent to deprive the owner of the property permanently or substantially. One does not receive rightful permission if it is induced by fraud or deception.
+* **Lying:** the presentation of false information with the intent to deceive.
+* **Cheating:** including, but not limited to, the following acts: 
+  * Plagiarism
+  * Unauthorized Assistance/Collaboration
+  * Use of Unauthorized Materials
+  * Unauthorized Dual Submission of Previous Academic Work
+  * Time Constraint Violation
+  * Directions Violation
+* **Stealing:** knowingly taking or appropriating the property of another, including property of the university, without the rightful owner’s permission and with the intent to deprive the owner of the property permanently or substantially. One does not receive rightful permission if it is induced by fraud or deception.
 
 ## Statement from W&M's Counseling Center
 
