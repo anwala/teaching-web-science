@@ -16,8 +16,10 @@ Integrated Science Center, room 3280. Tuesdays/Thursdays 09:30 -– 10:50 am
 
 ## Instructor Contact and Office Hours
 
-Dr. Alexander C. Nwala: acnwala at wm.edu, <https://alexandernwala.com/>
-[Office hours](https://alexandernwala.com/contact/)
+Dr. Alexander C. Nwala
+* Email: acnwala at wm.edu, 
+* Website: <https://alexandernwala.com/>
+* [Office hours](https://alexandernwala.com/contact/)
 
 ## Course Objectives
 
