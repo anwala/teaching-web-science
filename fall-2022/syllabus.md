@@ -167,7 +167,7 @@ Student Accessibility Services strives to foster student independence, to encour
 
 The course **Coming soon** should be your first reference for questions about the class. If you have questions about course requirements or materials, post questions using the class **Coming soon**. For extra help, attend office hours.
 
-## [The Honor Code](https://www.wm.edu/offices/deanofstudents/services/communityvalues/studenthandbook/honor_system/index.php)
+## W&M's [Honor Code](https://www.wm.edu/offices/deanofstudents/services/communityvalues/studenthandbook/honor_system/index.php)
 
 Among the most significant traditions of William & Mary is its student-administered honor system. The essence of the honor system is individual responsibility. We entrust students to maintain the Code and adjudicate matters involving alleged violations of the Code.
 
