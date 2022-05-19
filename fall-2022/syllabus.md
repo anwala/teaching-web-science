@@ -129,8 +129,9 @@ Your grade in this class will be based on the following components:
 | | Nov 23 -- 27 |**NO CLASS - Election Day, Go Vote!**
 |12|Nov 29 & Dec 1|Clustering Algorithms<br/>**Nov 24-28 - Thanksgiving Break**|
 |13|Dec 6 & 8 |Document Filtering (Classification)
-<!--|14|Dec 3|kNN and Algorithm Summary-->
 || Fri, Dec 9|*last day of classes*
+<!--|14|Dec 3|kNN and Algorithm Summary-->
+
 
 ## Related Courses from Colleagues at [ODU CS](https://odu.edu/compsci)
 
