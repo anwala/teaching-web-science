@@ -6,7 +6,7 @@
 
 The Web has fundamentally changed how we learn, play, communicate, and work. Its influence has become so monumental that it has given birth to a new science: Web Science, or the science of decentralized information structures. Although Web Science is interdisciplinary by nature, this course will be focus mainly on the computing aspects of the Web.
 
-**Catalog Description:** Provides an overview of the World Wide Web and associated decentralized information structures, focusing mainly on the computing aspects of the Web: how it works, how it is used, and how it can be analyzed. Students will examine a number of topics including: web architecture, web characterization and analysis, web archiving, Web 2.0, social networks, (creating/detecting) social bots,  intelligence, search engines, web mining, information diffusion on the web, Semantic Web, etc.
+**Catalog Description:** Provides an overview of the World Wide Web and associated decentralized information structures, focusing mainly on the computing aspects of the Web: how it works, how it is used, and how it can be analyzed. Students will examine a number of topics including: web architecture, web characterization and analysis, web archiving, Web 2.0, social networks, (creating/detecting) social bots, collective intelligence, search engines, web mining, information diffusion on the web, Semantic Web, etc.
 
 **Prerequisites:** CSCI 140 OR DATA 140 OR CSCI 141 OR DATA 141 OR C141 1.
 
@@ -86,10 +86,10 @@ Your grade in this class will be based on the following components:
 **Homework (HW)** - 90 points
 
 * Implement concepts from class along with a report
-* 9 homework assignments (HW1-HW9), each worth 10 points
+* 9 homework assignments (HW1 -- HW9), each worth 10 points
 * Released on Saturdays and usually due 2 weeks later on Sunday
-* *Don't wait until the last minute -- these are hard and time-consuming!*
-* Grading scale: 0-10
+* *Don't wait until the last minute --- these are hard and time-consuming!*
+* Grading scale: 0 -- 10
   * 2 points are reserved for the required report
   * many homework assignments will have extra credit opportunities
 * All work must be your own. You may use resources (e.g., Stack Overflow) on the Internet for reference. If you use online resources, you must cite your sources (including URL). Group work on HW assignments is not acceptable.
@@ -98,14 +98,14 @@ Your grade in this class will be based on the following components:
 
 ### Grading Scale
 
-| points | letter | | points | letter |
+| Numerical Grade | Letter Grade | | Numerical Grade | Letter Grade |
 | --- | --- | --- | --- | --- |
-| 100-93 | A | | 76-73 | C |
-| 92-90 | A- | | 72-70 | C- |
-| 89-87 | B+ | | 69-67 | D+ |
-| 86-83 | B| | 66-63 | D |
-| 82-80 | B- | | 62-60 | D- |
-| 79-77 | C+ | | 59-00 | F |
+| 93 -- 100 | A | | 73 -- 76 | C |
+| 90 -- 92 | A- | | 70 -- 72 | C- |
+| 87 -- 89 | B+ | | 67 -- 69 | D+ |
+| 83 -- 86 | B| | 63 -- 66 | D |
+| 80 -- 82 | B- | | 60 -- 62 | D- |
+| 77 -- 79 | C+ | | 00 -- 59 | F |
 
 ## Summary Schedule
 
@@ -113,7 +113,7 @@ Your grade in this class will be based on the following components:
 
 [W&M Fall 2022 academic schedule](https://www.wm.edu/offices/registrar/calendarsandexams/ugcalendars/index.php#fall)
 
-|Week |Week Start Date|Topic|
+|Week |Lecture Dates|Topic|
 |---|---|---|
 |1|Sep  1 &  6|Introduction to Web Science and Web Architecture
 |2|Sep  8 & 13|Introduction to Python
@@ -128,8 +128,8 @@ Your grade in this class will be based on the following components:
 | | Nov 8 |**NO CLASS - Election Day, Go Vote!**
 |10|Nov 10 & 15|Disinformation
 |11|Nov 17 & 22|Collective Intelligence and Recommender Systems
-| | Nov 23 -- 27 |**NO CLASS - Election Day, Go Vote!**
-|12|Nov 29 & Dec 1|Clustering Algorithms<br/>**Nov 24-28 - Thanksgiving Break**|
+| | Nov 23 -- 27 |**NO CLASS - Thanksgiving Break**
+|12|Nov 29 & Dec 1|Clustering Algorithms
 |13|Dec 6 & 8 |Document Filtering (Classification)
 || Fri, Dec 9|*last day of classes*
 <!--|14|Dec 3|kNN and Algorithm Summary-->
