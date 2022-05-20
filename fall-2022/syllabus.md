@@ -145,7 +145,7 @@ Your grade in this class will be based on the following components:
 
 ## Course History
 
-This course at ODU was originally developed by my PhD supervisor [Dr. Michael Nelson](https://www.cs.odu.edu/~mln/), based on Dr. Frank McCown (ODU alum)'s Intro to Web Science course at Harding University. In previous semesters, it has also been taught by [Dr. Michele C. Weigle](https://cs.odu.edu/~mweigle/) (my 2nd PhD supervisor), and myself during my PhD at ODU.
+This course at ODU was originally developed by my PhD supervisor [Dr. Michael Nelson](https://www.cs.odu.edu/~mln/), based on Dr. Frank McCown (ODU alum)'s Intro to Web Science course at Harding University. In previous semesters, it has also been taught by [Dr. Michele C. Weigle](https://cs.odu.edu/~mweigle/) (my 2nd PhD supervisor), and I during my PhD at ODU.
 
 ## Course Policies
 
@@ -155,7 +155,11 @@ Each student must check email and the class **Coming soon** daily. You should us
 
 ### Participation
 
-Since this is an online class, it is essential that you regularly stay involved in class activities. This includes checking the class Blackboard for announcements, submitting assignments on time, and responding to discussion posts in a timely manner.
+Regularly stay involved in class activities. This includes checking the **Coming soon** for announcements, submitting assignments on time, and responding to discussion posts in a timely manner.
+
+### Seeking Help
+
+The course **Coming soon** should be your first reference for questions about the class. If you have questions about the course requirements or materials, post your questions using the class **Coming soon**. For extra help, attend [office hours](https://alexandernwala.com/contact/).
 
 ### [Student Accessibility Services](https://www.wm.edu/offices/deanofstudents/services/studentaccessibilityservices/)
 
@@ -164,10 +168,6 @@ W&M's Student Accessibility Services offer a variety of services (e.g., [Watson 
 The mission of Student Accessibility Services is to create a barrier-free environment for matriculating students with debilitating diagnosed conditions by considering reasonable accommodations upon request on an individual and flexible basis. 
 
 Student Accessibility Services strives to foster student independence, to encourage self-determination, to emphasize empowerment and accommodation over limitation, and to create a comprehensive, accessible environment to ensure that individuals are viewed on the basis of contribution, not deficit.
-
-### Seeking Help
-
-The course **Coming soon** should be your first reference for questions about the class. If you have questions about course requirements or materials, post questions using the class **Coming soon**. For extra help, attend office hours.
 
 ## W&M's [Honor Code](https://www.wm.edu/offices/deanofstudents/services/communityvalues/studenthandbook/honor_system/index.php)
 
