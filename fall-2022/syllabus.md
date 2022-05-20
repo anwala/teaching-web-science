@@ -141,7 +141,6 @@ Your grade in this class will be based on the following components:
 * Information retrieval, metadata - [CS 834 - Intro to Information Retrieval](https://phonedude.github.io/cs834-f16/)
 * Visualization, Analytics - [CS 625 - Data Visualization](https://web.archive.org/web/20201124115631/https://www.cs.odu.edu/~mweigle/CS625-F20/Home), [CS 725/825 - Information Visualization](https://web.archive.org/web/20210130204513/https://www.cs.odu.edu/~mweigle/CS725-S21/Home)
 * Web programming, LAMP - [CS 418/518 - Web Programming](https://fanchyna.wixsite.com/jianwu/cs418-518-fall2019)
-* Data science - [CS 620 - Intro to Data Science](https://www.cs.odu.edu/~sampath/courses/f19/cs620/)
 
 ## Course History
 
