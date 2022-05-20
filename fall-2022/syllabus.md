@@ -125,7 +125,7 @@ Your grade in this class will be based on the following components:
 |7|Oct 18 & 20|Social Networks
 |8|Oct 25 & 27|Selection and Social Influence
 |9|Nov 1 & 3|Visualizing Social Networks
-| | Nov 8 |**NO CLASS - Election Day, Go Vote!**
+| | Nov 8 |**NO CLASS - Election Day, Go Vote! 🗳️**
 |10|Nov 10 & 15|Disinformation
 |11|Nov 17 & 22|Collective Intelligence and Recommender Systems
 | | Nov 23 -- 27 |**NO CLASS - Thanksgiving Break**
