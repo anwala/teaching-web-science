@@ -25,36 +25,34 @@ This is where you'd submit all your assignments. Since this is a private Github 
 
 ## Markdown (1 points)
 
-From the `hw0` folder of your private GitHub assignment repo, create a new Markdown file named `hw0_report.md` and copy the content from [data440_report_template.md](data440_report_template.md) into it.
+1. From the `hw0` folder of your private GitHub assignment repo, create a new Markdown file named `hw0_report.md` and copy the content from [data440_report_template.md](data440_report_template.md) into it. 
 
-Modify the content to include your name, class (DATA 440), assignment number/title, and dates for this exercise.
+2. Modify the content to include your name, class (DATA 440), assignment number/title, and dates for this exercise.
 
-Upload an image to your GitHub repo and include it in place of the "Growth of the Early Web" image. Make sure to change the description of the image in the report, too.
+3. Upload an image to your GitHub repo and include it in place of the "Growth of the Early Web" image. Make sure to change the description of the image in the report, too.
 
-Replace the code in the fenced code block with any other block of code.  You can use some Python code, or you can insert code from a different language -- just change the language indicated so that syntax highlighting still works properly.
+4. Replace the code in the fenced code block with any other block of code.  You can use some Python code, or you can insert code from a different language -- just change the language indicated so that syntax highlighting still works properly.
 
-Edit the first table so that it matches the first 4 weeks of our class schedule, as given in our [syllabus](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/syllabus.md#summary-schedule).
+5. Edit the first table so that it matches the first 4 weeks of our class schedule, as given in our [syllabus](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/syllabus.md#summary-schedule).
 
-In the References section, replace the placeholder references with three webpages that you've visited so far this semester related to the class. These should include both the title of the webpage/article and the URL.
+6. In the References section, replace the placeholder references with three webpages that you've visited so far this semester related to the class. These should include both the title of the webpage/article and the URL.
 
-Finally, make sure that your `hw0` folder in your GitHub assignments repo contains the final version of your edited report file (`hw0_report.md`) and your included image.  In your final commit, use the commit message `@anwala ready to grade`.
+7. Finally, make sure that your `hw0` folder in your GitHub assignments repo contains the final version of your edited report file (`hw0_report.md`) and your included image.  In your final commit, use the commit message `@anwala ready to grade`.
 
 ## LaTeX and Overleaf (1 points + 2 extra-credit points)
 
-To receive up to 2 extra-credit points, reports must be written in LaTeX (not Markdown) and compiled into a PDF document.
+To receive up to 2 extra-credit points, reports must be written in LaTeX (not Markdown) and compiled into a PDF document. [Overleaf](https://overleaf.com) provides an online setup for writing and compiling LaTeX into PDF.  You will need to sign up for a free [Overleaf](https://overleaf.com) account. Alternatively, you may run LaTeX locally to generate your PDF.
 
-[Overleaf](https://overleaf.com) provides an online setup for writing and compiling LaTeX into PDF.  You will need to sign up for a free [Overleaf](https://overleaf.com) account. Alternatively, you may run LaTeX locally to generate your PDF.
+1. Use the "[DATA440 - report template](https://www.overleaf.com/read/vrfznvpgyrjc)". Rename your folder containing your LaTeX files to `report`. It should contain a `report.tex` and `report.pdf`. All these should be placed inside the `hw0` folder of your private GitHub assignment repo. 
 
-Use the "[DATA440 - report template](https://www.overleaf.com/read/vrfznvpgyrjc)". Rename your folder containing your LaTeX files to `report`. It should contain a `report.tex` and `report.pdf`. All these should be placed inside the `hw0` folder of your private GitHub assignment repo. 
+2. Modify the report to include your name, class (DATA 440), assignment number/title, and dates for this exercise.
 
-Modify the report to include your name, class (DATA 440), assignment number/title, and dates for this exercise.
+3. Replace the "Growth of the Early Web" image. Make sure to change the image caption and description of the image in the report, too.
 
-Replace the "Growth of the Early Web" image. Make sure to change the image caption and description of the image in the report, too.
+4. Replace the code in the `lstlisting` environment with another block of code.  You can use some Python code, or you can insert code from a different language -- just change the language indicated so that syntax highlighting still works properly.  Make sure to change the caption as needed.
 
-Replace the code in the `lstlisting` environment with another block of code.  You can use some Python code, or you can insert code from a different language -- just change the language indicated so that syntax highlighting still works properly.  Make sure to change the caption as needed.
+5. Edit Table 1 so that it matches the first 4 weeks of our class schedule, as given in our [syllabus](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/syllabus.md#summary-schedule).
 
-Edit Table 1 so that it matches the first 4 weeks of our class schedule, as given in our [syllabus](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/syllabus.md#summary-schedule).
+6. In the References section, replace the placeholder references with three webpages that you've visited so far this semester related to the class. These should include both the title of the webpage/article and the URL.
 
-In the References section, replace the placeholder references with three webpages that you've visited so far this semester related to the class. These should include both the title of the webpage/article and the URL.
-
-Finally, make sure that your `hw0` folder in your GitHub assignments repo contains all necessary files required to generate your PDF (e.g., `report.tex` and images). In your final commit, use the commit message `@anwala ready to grade`
+7. Finally, make sure that your `hw0` folder in your GitHub assignments repo contains all necessary files required to generate your PDF (e.g., `report.tex` and images). In your final commit, use the commit message `@anwala ready to grade`
