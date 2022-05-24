@@ -78,15 +78,10 @@ There will be a total of 100 points. However, there will be multiple opportuniti
 
 Your grade in this class will be based on the following components:
 
-**Online and Class Participation** - 10 points
-
-* Class discussion based on the week's topic or current events.
-* More details coming soon.
-
-**Homework (HW)** - 90 points
+**Homework (HW)** - 100 points + **Coming soon** extra-credit points
 
 * Implement concepts from class along with a report
-* 9 homework assignments (HW1 -- HW9), each worth 10 points
+* 10 homework assignments (HW0 -- HW9), each worth 10 points
 * Released on Saturdays and usually due 2 weeks later on Sunday
 * *Don't wait until the last minute --- these are hard and time-consuming!*
 * Grading scale: 0 -- 10
@@ -135,25 +130,25 @@ Your grade in this class will be based on the following components:
 <!--|14|Dec 3|kNN and Algorithm Summary-->
 
 <!--
-  |Week |Lecture Dates|Topic|
-|---|---|---|
-|1|Sep  1 &  6|Introduction to Web Science and Web Architecture (HW0, Sep 1 -- 13)
-|2|Sep  8 & 13|Introduction to Python (HW1 - Web Sci. Intro, Sep 13 -- 27)
-|3|Sep 15 & 20|Introduction to Info Vis with R, Python
-|4|Sep 22 & 27|Measuring the Web
-|5|Sep 29 & Oct 4|Archiving the Web (HW2 - Archiving the Web, Sep 29 -- Oct 11)
-|6|Oct 6  & 11|Searching the Web (HW3 - Ranking Webpages, Oct 11 -- Oct 20)
-| | Oct 13 -- 16 |**NO CLASS - Fall Break**
-|7|Oct 18 & 20|Social Networks (HW4 - Exploring Social Networks, Oct 20 -- Nov 3)
-|8|Oct 25 & 27|Selection and Social Influence 
-|9|Nov 1 & 3|Visualizing Social Networks (HW5 - Graph partitioning, Nov 3 -- Nov 15)
-| | Nov 8 |**NO CLASS - Election Day, Go Vote! 🗳️**
-|10|Nov 10 & 15|Disinformation (HW6 - Analyzing Disinformation Domains, Nov 15 -- Nov 22)
-|11|Nov 17 & 22|Collective Intelligence and Recommender Systems (HW7 - Recommender Systems, Nov 22 -- Dec 1)
-| | Nov 23 -- 27 |**NO CLASS - Thanksgiving Break**
-|12|Nov 29 & Dec 1|Clustering Algorithms (HW8 - Clustering, Dec 1 -- Dec 8)
-|13|Dec 6 & 8 |Document Filtering (Classification) (HW9 - Email classification, Dec 8 -- Dec 20)
-|| Fri, Dec 9|*last day of classes*
+|Week |Lecture Dates|Topic|Homeworks (Date assigned -- Due Date)
+|---|---|---|---|
+|1|Sep  1 &  6|Introduction to Web Science and Web Architecture| HW0 - Getting started, Sep 1 -- 13
+|2|Sep  8 & 13|Introduction to Python| HW1 - Web Sci. Intro, Sep 13 -- 27
+|3|Sep 15 & 20|Introduction to Info Vis with R, Python|
+|4|Sep 22 & 27|Measuring the Web|
+|5|Sep 29 & Oct 4|Archiving the Web| HW2 - Archiving the Web, Sep 29 -- Oct 11
+|6|Oct 6  & 11|Searching the Web| HW3 - Ranking Webpages, Oct 11 -- Oct 20
+| | Oct 13 -- 16 |**NO CLASS - Fall Break**|
+|7|Oct 18 & 20|Social Networks| HW4 - Exploring Social Networks, Oct 20 -- Nov 3
+|8|Oct 25 & 27|Selection and Social Influence| 
+|9|Nov 1 & 3|Visualizing Social Networks| HW5 - Graph partitioning, Nov 3 -- Nov 15
+| | Nov 8 |**NO CLASS - Election Day, Go Vote! 🗳️**|
+|10|Nov 10 & 15|Disinformation| HW6 - Analyzing Disinformation Domains, Nov 15 -- Nov 22
+|11|Nov 17 & 22|Collective Intelligence and Recommender Systems| HW7 - Recommender Systems, Nov 22 -- Dec 1
+| | Nov 23 -- 27 |**NO CLASS - Thanksgiving Break**|
+|12|Nov 29 & Dec 1|Clustering Algorithms| HW8 - Clustering, Dec 1 -- Dec 8
+|13|Dec 6 & 8 |Document Filtering (Classification)| HW9 - Email classification, Dec 8 -- Dec 20
+|| Fri, Dec 9|*last day of classes*|
 -->
 
 
@@ -170,17 +165,17 @@ This course at ODU was originally developed by my PhD supervisor [Dr. Michael Ne
 
 ## Course Policies
 
-### Email/Blackboard
+### Piazza
 
-Each student must check email and the class **Coming soon** daily. You should use our class **Coming soon** to ask and answer general course-related questions. I will use **Coming soon** to notify you about important updates (assignment deadline changes, office hours cancellations, etc.).
+Each student must check the class Piazza (DATA 440) daily. You should use our class Piazza forum to ask and answer general course-related questions. I will use Piazza to notify you about important updates (assignment deadline changes, office hours cancellations, etc.).
 
 ### Participation
 
-Regularly stay involved in class activities. This includes checking the **Coming soon** for announcements, submitting assignments on time, and responding to discussion posts in a timely manner.
+Regularly stay involved in class activities. This includes checking Piazza for announcements, submitting assignments on time, and responding to discussion posts in a timely manner.
 
 ### Seeking Help
 
-The course **Coming soon** should be your first reference for questions about the class. If you have questions about the course requirements or materials, post your questions using the class **Coming soon**. For extra help, attend [office hours](https://alexandernwala.com/contact/).
+The course Piazza forum should be your first reference for questions about the class. If you have questions about the course requirements or materials, post your questions on Piazza. For extra help, attend [office hours](https://alexandernwala.com/contact/).
 
 ### [Student Accessibility Services](https://www.wm.edu/offices/deanofstudents/services/studentaccessibilityservices/)
 
