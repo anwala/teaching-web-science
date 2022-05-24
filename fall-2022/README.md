@@ -10,7 +10,7 @@
 
 |Week |Lecture Dates|Topic|Homeworks (Date assigned -- Due Date)
 |---|---|---|---|
-|1|Sep  1 &  6|Introduction to Web Science and Web Architecture| [HW0]() - Getting started, Sep 1 -- 13
+|1|Sep  1 &  6|Introduction to Web Science and Web Architecture| [HW0](/homework/hw0) - Getting started, Sep 1 -- 13
 <!--
 |2|Sep  8 & 13|Introduction to Python| HW1 - Web Sci. Intro, Sep 13 -- 27
 |3|Sep 15 & 20|Introduction to Info Vis with R, Python|
