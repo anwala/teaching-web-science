@@ -76,7 +76,7 @@ There will be a total of 100 points. However, there will be multiple opportuniti
 
 ### Assignment Types
 
-Your grade in this class will be based on the following components:
+I will post all assignments on our the [DATA 440 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2022/homework). Usually the new repo will only contain a `README.md` file with the assignment instructions.  For some assignments, the repo may also contain data files needed to complete the assignment. Your grade in this class will be based on the following components:
 
 **Homework (HW)** - 100 points + **Coming soon** extra-credit points
 
