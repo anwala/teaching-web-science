@@ -6,7 +6,9 @@
 
 Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw0_report` with the proper file extension.
 
-### Q1
+(**Report (2 points**)
+
+### Q1 (2 points)
 Consider the "bow-tie" structure of the web in the Broder et al. paper ["Graph Structure in the Web"](https://web.archive.org/web/20220505225729/https://snap.stanford.edu/class/cs224w-readings/broder00bowtie.pdf) that was described in Module 1. 
 
 Now consider the following links:
@@ -43,7 +45,7 @@ For the graph, list the nodes (in alphabetical order) that are each of the follo
 * Disconnected:
     
     
-### Q2
+### Q2 (3 points)
 Demonstrate that you know how to use `curl` and are familiar with the available options.
 
 a) First, load this URI [https://httpbin.org/user-agent](https://httpbin.org/user-agent) directly in your browser and take a screenshot.  The resulting webpage should show the "User-Agent" HTTP request header that your web browser sends to the web server.
@@ -52,7 +54,7 @@ b) In a single `curl` command, issue a `HEAD` HTTP request for the URI, [https:/
 
 Briefly explain the results you get for each of these steps.
 
-### Q3
+### Q3 (3 points)
 Write a Python program to find links to PDFs in a webpage.
 
 Your program must do the following:

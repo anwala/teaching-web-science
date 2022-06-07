@@ -1,4 +1,4 @@
-# Extra Credit (EC) 0.8 - MemGator
+# How to Install MemGator
 
 Download and install a local version of MemGator
 
@@ -18,20 +18,20 @@ Test out your installation of memgator with the following example.
 * Replace `./memgator-darwin-amd64` with the appropriate executable for your system
 
 ```bash
-$ ./memgator-darwin-amd64 -F 2 -f JSON https://www.cs.odu.edu/~mweigle/ > mweigle-tm.json
+$ ./memgator-darwin-amd64 -F 2 -f JSON https://alexandernwala.com/ > anwala_tm.json
 ```
 
-The result in `mweigle-tm.json` should be similar to what you see below.  
+The result in `anwala_tm.json` should be similar to what you see below.  
 ```bash
-$ head mweigle-tm.json
+$ head anwala_tm.json
 {
-  "original_uri": "https://www.cs.odu.edu/~mweigle/",
-  "self": "http://localhost:1208/timemap/json/https://www.cs.odu.edu/~mweigle/",
+  "original_uri": "https://alexandernwala.com",
+  "self": "http://localhost:1208/timemap/json/https://alexandernwala.com",
   "mementos": {
     "list": [
       {
-        "datetime": "2006-08-30T23:22:00Z",
-        "uri": "https://web.archive.org/web/20060830232200/http://www.cs.odu.edu/~mweigle/"
+        "datetime": "2021-07-25T05:52:37Z",
+        "uri": "https://web.archive.org/web/20210725055237/https://alexandernwala.com/"
       },
       {
         ...

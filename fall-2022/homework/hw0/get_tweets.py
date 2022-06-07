@@ -1,5 +1,5 @@
-# collect-tweets.py
-# MCW - 7/1/2021
+# get_tweets.py
+# Credit: MCW
 
 # More examples at
 # https://github.com/twitterdev/getting-started-with-the-twitter-api-v2-for-academic-research/blob/main/modules/6b-labs-code-standard-python.md

@@ -1,5 +1,5 @@
-# process-tweets.py
-# MCW - 7/1/2021
+# process_tweets.py
+# Credit: MCW
 
 import sys
 import json
