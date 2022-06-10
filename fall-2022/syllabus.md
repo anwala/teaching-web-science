@@ -1,4 +1,4 @@
-# W&M DATA 440 - Web Science, Fall 2022 Syllabus
+# W&M DATA 440-03 - Web Science, Fall 2022 Syllabus
 
 [Jump to Summary Schedule](#summary-schedule) | [Download printable PDF version - Coming soon](#)
 
@@ -76,7 +76,7 @@ There will be a total of 100 points. However, there will be multiple opportuniti
 
 ### Assignment Types
 
-I will post all assignments on our the [DATA 440 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2022/homework). Usually the new repo will only contain a `README.md` file with the assignment instructions.  For some assignments, the repo may also contain data files needed to complete the assignment. Your grade in this class will be based on the following components:
+I will post all assignments on our the [DATA 440-03 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2022/homework). Usually the new repo will only contain a `README.md` file with the assignment instructions.  For some assignments, the repo may also contain data files needed to complete the assignment. Your grade in this class will be based on the following components:
 
 **Homework (HW)** - 100 points + **Coming soon** extra-credit points
 
@@ -144,7 +144,7 @@ This course at ODU was originally developed by my PhD supervisor [Dr. Michael Ne
 
 ### Piazza
 
-Each student must check the class Piazza (DATA 440) daily. You should use our class Piazza forum to ask and answer general course-related questions. I will use Piazza to notify you about important updates (assignment deadline changes, office hours cancellations, etc.).
+Each student must check the class Piazza (DATA 440-03) daily. You should use our class Piazza forum to ask and answer general course-related questions. I will use Piazza to notify you about important updates (assignment deadline changes, office hours cancellations, etc.).
 
 ### Participation
 
