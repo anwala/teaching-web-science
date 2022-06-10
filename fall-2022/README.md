@@ -15,8 +15,8 @@
 |3|Sep 15 & 20|Introduction to Info Vis with R, Python|[InfoVis in R Colab notebook](week-3/data_440_f22_mod_03_info_vis_r.ipynb)<br/>[InfoVis in Python Colab notebook](week-3/data_440_f22_mod_03_info_vis_python.ipynb)|
 |4|Sep 22 & 27|Measuring the Web|
 |5|Sep 29 & Oct 4|Archiving the Web| [HW2](homework/hw2) - Archiving the Web, Sep 29 -- Oct 11
+|6|Oct 6  & 11|Searching the Web| [HW3](homework/hw3) - Ranking Webpages, Oct 11 -- Oct 20
 <!--
-|6|Oct 6  & 11|Searching the Web| HW3 - Ranking Webpages, Oct 11 -- Oct 20
 | | Oct 13 -- 16 |**NO CLASS - Fall Break**|
 |7|Oct 18 & 20|Social Networks| HW4 - Exploring Social Networks, Oct 20 -- Nov 3
 |8|Oct 25 & 27|Selection and Social Influence| 
