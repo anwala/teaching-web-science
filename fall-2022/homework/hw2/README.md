@@ -10,6 +10,8 @@ Write a report that contains the answers and *explains how you arrived at the an
 
 **Note about Programming Tasks:** For several of the programming tasks this semester, you will be asked to write code to operate on 100s or 1000s of data elements.  If you have not done this type of development before, I *strongly encourage* you to start small and work your way up.  Especially when you are using new tools or APIs, start on a small test dataset to make sure you understand how to use the tool and that your processing scripts are working before ramping up to the full set. *This will save you an enormous amount of time.*
 
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw2_report` with the proper file extension.
+
 (**Report (2 points**)
 
 ### Q1. Collect URIs from Tweets (2 points)

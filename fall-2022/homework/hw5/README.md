@@ -8,6 +8,9 @@ You will investigate the split of the Karate Club (Zachary, 1977), described sta
 
 Write a report that answers and *explains how you arrived at the answers* to the following questions. Include any interesting findings that you discover from your analysis.
 
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw5_report` with the proper file extension.
+
+
 (**Report (2 points**)
 
 ### Q1. Color nodes based on final split (2 points)

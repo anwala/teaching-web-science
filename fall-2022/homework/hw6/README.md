@@ -10,6 +10,9 @@ However, not all bots are bad. In this assignment you will prove this point by c
 
 Your Twitter bot must post tweets on a special Twitter account created by you.
 
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw6_report` with the proper file extension.
+
+
 (**Report (2 points**)
 
 ### Criteria 1. Usefulness (4 points)
