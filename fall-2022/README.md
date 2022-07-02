@@ -25,7 +25,8 @@
 |11|Nov 17 & 22|Collective Intelligence and Recommender Systems| [PCI Ch2 (Making Recommendations) code examples](week-11/data_440_03_f22_mod_11_pci_ch_02.ipynb) <br/> [HW7](homework/hw7) - Recommender Systems, Nov 22 -- Dec 1
 | | Nov 23 -- 27 |**NO CLASS - Thanksgiving Break**|
 |12|Nov 29 & Dec 1|Clustering Algorithms| [PCI Ch3 (Discovering Groups) code examples](week-12/data_440_03_f22_mod_12_pci_ch_03.ipynb) <br/> [HW8](homework/hw8) - Clustering, Dec 1 -- Dec 8
-<!--
-|13|Dec 6 & 8 |Document Filtering (Classification)| HW9 - Email classification, Dec 8 -- Dec 20
+|13|Dec 6 & 8 |Document Filtering (Classification)| [PCI Ch6 (Document Filtering) code examples](week-13/data_440_03_f22_mod_13_pci_ch_06.ipynb) <br/> [HW9](homework/hw9) - Email classification, Dec 8 -- Dec 20
 || Fri, Dec 9|*last day of classes*|
+<!--
+|13|Dec 6 & 8 |kNN and Algorithm| [PCI Ch8 (Building Price Models) code examples](week-14/data_440_03_f22_mod_14_pci_ch_08.ipynb)
 -->
