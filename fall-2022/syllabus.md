@@ -78,7 +78,7 @@ There will be a total of **110 points** (100 points for assignments, 10 points p
 
 I will post all assignments on our the [DATA 440-03 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2022/homework). Usually the new repo will only contain a `README.md` file with the assignment instructions.  For some assignments, the repo may also contain data files needed to complete the assignment. Your grade in this class will be based on the following components:
 
-**Homework (HW)** - 100 points + **Coming soon** extra-credit points
+**Homework (HW)** - 100 points + **44** extra-credit points
 
 * Implement concepts from class along with a report
 * 10 homework assignments (HW0 -- HW9), each worth 10 points
@@ -127,7 +127,7 @@ I will post all assignments on our the [DATA 440-03 Github repo](https://github.
 |12|Nov 29 & Dec 1|Clustering Algorithms
 |13|Dec 6 & 8 |Document Filtering (Classification)
 || Fri, Dec 9|*last day of classes*
-<!--|14|Dec 3|kNN and Algorithm Summary-->
+<!--|14|Dec 3|kNN and Algorithm Summary
 
 ## Related Courses from Colleagues at [ODU CS](https://odu.edu/compsci)
 
@@ -135,7 +135,7 @@ I will post all assignments on our the [DATA 440-03 Github repo](https://github.
 * Information retrieval, metadata - [CS 834 - Intro to Information Retrieval](https://phonedude.github.io/cs834-f16/)
 * Visualization, Analytics - [CS 625 - Data Visualization](https://web.archive.org/web/20201124115631/https://www.cs.odu.edu/~mweigle/CS625-F20/Home), [CS 725/825 - Information Visualization](https://web.archive.org/web/20210130204513/https://www.cs.odu.edu/~mweigle/CS725-S21/Home)
 * Web programming, LAMP - [CS 418/518 - Web Programming](https://fanchyna.wixsite.com/jianwu/cs418-518-fall2019)
-
+-->
 ## Course History
 
 This course at ODU was originally developed by my PhD supervisor [Dr. Michael Nelson](https://www.cs.odu.edu/~mln/), based on Dr. Frank McCown (ODU alum)'s Intro to Web Science course at Harding University. In previous semesters, it has also been taught by [Dr. Michele C. Weigle](https://cs.odu.edu/~mweigle/) (my 2nd PhD supervisor), and I during my PhD at ODU.
