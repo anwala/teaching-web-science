@@ -72,7 +72,7 @@ There is no required textbook, but here is a list of recommended books:
 
 ## Grading
 
-There will be a total of 100 points. However, there will be multiple opportunities for extra credits, I'd advise you to do as many extra credits as possible. Consider them as a safety net.
+There will be a total of **110 points** (100 points for assignments, 10 points points for attendance), and **44 extra** credits points. I'd advise you to do as many extra credits as possible. Consider them as a safety net.
 
 ### Assignment Types
 
