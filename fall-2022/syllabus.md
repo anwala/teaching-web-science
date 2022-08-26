@@ -73,13 +73,13 @@ There is no required textbook, but here is a list of recommended books:
 
 ## Grading
 
-There will be a total of **110 points** (90 points for assignments, 10 points for final exam, and 10 points points for participation/attendance), and **44 extra** credits points. I'd advise you to do as many extra credits as possible. Consider them as a safety net.
+There will be a total of **110 points** (90 points for assignments, 10 points for final exam, and 10 points points for participation/attendance), and **23 extra** credits points. I'd advise you to do as many extra credits as possible. Consider them as a safety net.
 
 ### Assignment Types
 
 I will post all assignments on our the [DATA 440-03 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2022/homework). Usually the new repo will only contain a `README.md` file with the assignment instructions.  For some assignments, the repo may also contain data files needed to complete the assignment. Your grade in this class will be based on the following components:
 
-**Homework (HW)** - 90 points + **35** extra-credit points
+**Homework (HW)** - 90 points + **23** extra-credit points
 
 * Implement concepts from class along with a report
 * 9 homework assignments (HW0 -- HW8), each worth 10 points
