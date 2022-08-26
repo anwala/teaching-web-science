@@ -25,13 +25,14 @@ Dr. Alexander C. Nwala
 
 After completing this course, you should be able to do the following:
 
-* Explain the interdisciplinary nature of web science.
-* Explain the main components of web architecture.
+* Explain the interdisciplinary nature of web sciencen and the main components of web architecture.
 * Explain how search engines index and rank webpages given a query.
-* Write Python code to interact with various web APIs and services, including web servers, web archives, Memento aggregators, and the Twitter API.
 * Explain the impact of social networks on how information (and disinformation) is spread on the web.
-* Explain the differences between classification and clustering algorithms.
-* Identify appropriate machine learning algorithms to apply given a problem.
+* Write Python code to interact with various web APIs and services, including web servers, web archives, Memento aggregators, and the Twitter API.
+* Use the command line to interact with web servers
+* Creating effective visualizations with moderate proficiency
+* Communicate more clearly in writing or speech
+* Desire to know more about the web through research!
 
 ## Requirements
 
@@ -54,34 +55,34 @@ Here are some good Intro to Python resources:
 There is no required textbook, but here is a list of recommended books:
 
 * [*Python in a Nutshell*](https://www.oreilly.com/library/view/python-in-a/0596001886/) - 3rd edition (Email me if you need a copy)
-  * mentioned in Module 2
+  * mentioned in Week 2
 * [*Learning Python*](https://www.oreilly.com/library/view/learning-python-5th/9781449355722/) - 5th edition (Email me if you need a copy)
-  * mentioned in Module 2
+  * mentioned in Week 2
 * [*An Introduction to Search Engines and Web Navigation*](http://www.wiley.com/WileyCDA/WileyTitle/productCd-047052684X.html)
-  * used in Module 6
+  * used in Week 6
 * [*Search Engines Information Retrieval in Practice*](https://ciir.cs.umass.edu/irbook/) - pdf available
-  * used in Module 6
+  * used in Week 6
 * [*Introduction to Information Retrieval*](https://nlp.stanford.edu/IR-book/) - pdf available
-  * used in Module 6
+  * used in Week 6
 * [*Networks, Crowds, and Markets: Reasoning About a Highly Connected World*](http://www.cs.cornell.edu/home/kleinber/networks-book/) - preprint available
-  * used in Modules 7, 8
+  * used in Weeks 7, 8
 * [*Programming Collective Intelligence*](https://www.oreilly.com/library/view/programming-collective-intelligence/9780596529321/) - (Email me if you need a copy)
-  * used in Modules 11-14
+  * used in Weeks 11-14
 * [*Speech and Language Processing*](https://web.stanford.edu/~jurafsky/slp3/) - pdf available
-  * mentioned in Modules 2, 6, 13
+  * mentioned in Weeks 2, 6, 13
 
 ## Grading
 
-There will be a total of **110 points** (100 points for assignments, 10 points points for attendance), and **44 extra** credits points. I'd advise you to do as many extra credits as possible. Consider them as a safety net.
+There will be a total of **110 points** (90 points for assignments, 10 points for final exam, and 10 points points for participation/attendance), and **44 extra** credits points. I'd advise you to do as many extra credits as possible. Consider them as a safety net.
 
 ### Assignment Types
 
 I will post all assignments on our the [DATA 440-03 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2022/homework). Usually the new repo will only contain a `README.md` file with the assignment instructions.  For some assignments, the repo may also contain data files needed to complete the assignment. Your grade in this class will be based on the following components:
 
-**Homework (HW)** - 100 points + **44** extra-credit points
+**Homework (HW)** - 90 points + **44** extra-credit points
 
 * Implement concepts from class along with a report
-* 10 homework assignments (HW0 -- HW9), each worth 10 points
+* 9 homework assignments (HW0 -- HW8), each worth 10 points
 * Released on Saturdays and usually due 2 weeks later on Sunday
 * *Don't wait until the last minute --- these are hard and time-consuming!*
 * Grading scale: 0 -- 10
@@ -89,7 +90,14 @@ I will post all assignments on our the [DATA 440-03 Github repo](https://github.
   * many homework assignments will have extra credit opportunities
 * All work must be your own. You may use resources (e.g., Stack Overflow) on the Internet for reference. If you use online resources, you must cite your sources (including URL). Group work on HW assignments is not acceptable.
 
-*There is no mid-term or final exam.*
+*There is no mid-term*
+
+**Participation/Attendance** - 10 points
+Participation is very important, it improves learning and contributes additional dimensions to discussions. I'd encourage participation by assigning scores to the following activities throughout the semester:
+* 1 point maximum per week: Engaging in productive discussions in class: asking/answering questions and contributing new ideas
+* 1 point maximum per week: Posting a solution or a question replying to on Piazza
+
+**Final exam** - 10 points
 
 ### Grading Scale
 
@@ -101,6 +109,11 @@ I will post all assignments on our the [DATA 440-03 Github repo](https://github.
 | 83 -- 86 | B| | 63 -- 66 | D |
 | 80 -- 82 | B- | | 60 -- 62 | D- |
 | 77 -- 79 | C+ | | 00 -- 59 | F |
+
+### Grading appeals
+You have two mutually exclusive options to appeal a grade:
+* Schedule a meeting or meet me during office hours to discuss ways you can improve on future assignments
+* Write a detailed explanation on why your work merits a higher grade. If you choose this option, I'll read your explanation and re-grade your assignment. Your grade may go up, down, or stay the same. We will meet again to discuss your work.
 
 ## Summary Schedule
 
@@ -127,8 +140,13 @@ I will post all assignments on our the [DATA 440-03 Github repo](https://github.
 |12|Nov 29 & Dec 1|Clustering Algorithms
 |13|Dec 6 & 8 |Document Filtering (Classification)
 || Fri, Dec 9|*last day of classes*
-<!--|14|Dec 3|kNN and Algorithm Summary
+<!--|14|Dec 3|kNN and Algorithm Summary-->
 
+### Add/drop and withdrawal deadlines:
+* Add/drop deadline: September 12, 2020
+* Withdrawal deadline: October 31, 2020
+
+<!--
 ## Related Courses from Colleagues at [ODU CS](https://odu.edu/compsci)
 
 * All things HTTP - [CS 531 - Web Server Design](https://cs531-f19.github.io/)
@@ -179,8 +197,12 @@ The Honor Code prohibits lying, cheating, and stealing. For definitions of each 
   * Directions Violation
 * **Stealing:** knowingly taking or appropriating the property of another, including property of the university, without the rightful owner’s permission and with the intent to deprive the owner of the property permanently or substantially. One does not receive rightful permission if it is induced by fraud or deception.
 
-## Statement from W&M's Counseling Center
+## Mental health and Statement from W&M's Counseling Center
 
+### Mental and physical health
+If you or someone you know is experiencing psychological/emotional stress, we encourage you to reach out: [W&M Counseling Center](https://www.wm.edu/offices/wellness/counselingcenter/) (757 221 3620, 240 Gooch Dr. 2nd floor). Services are free and confidential. For physical/medical concerns, please reach out to the [W&M Health Center](https://www.wm.edu/offices/wellness/healthcenter/) or call (757) 221-4386, 240 Gooch Drive. If you or someone you know is in need of additional support or resources, please contact the Dean of Students by submitting a [care report](https://www.wm.edu/offices/deanofstudents/services/caresupportservices/index.php), by phone at (757) 221-2510, or by email at deanofstudents@wm.edu.
+
+### Statement from W&M's Counseling Center
 The William & Mary [Counseling Center](https://www.wm.edu/offices/wellness/counselingcenter/students/index.php) is one of the resources made available to you through the [Division of Student Affairs](https://www.wm.edu/about/administration/senioradmin/studentaffairs/index.php). Its primary purpose is to support the mental health and emotional wellness of the community by providing education outreach programming, targeted prevision activities, and intervention services specifically designed for college students. 
 
 The center offers individual, couples and group counseling as appropriate to student needs. We also provide referrals to other resources within the university or the local community that help to support student health and wellness. We are invested in your personal and academic success during your time at W&M, and throughout your life.
