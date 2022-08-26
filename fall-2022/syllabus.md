@@ -30,7 +30,7 @@ After completing this course, you should be able to do the following:
 * Explain the impact of social networks on how information (and disinformation) is spread on the web.
 * Write Python code to interact with various web APIs and services, including web servers, web archives, Memento aggregators, and the Twitter API.
 * Use the command line to interact with web servers
-* Creating effective visualizations with moderate proficiency
+* Create effective visualizations with moderate proficiency
 * Communicate more clearly in writing or speech
 * Desire to know more about the web through research!
 
@@ -79,7 +79,7 @@ There will be a total of **110 points** (90 points for assignments, 10 points fo
 
 I will post all assignments on our the [DATA 440-03 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2022/homework). Usually the new repo will only contain a `README.md` file with the assignment instructions.  For some assignments, the repo may also contain data files needed to complete the assignment. Your grade in this class will be based on the following components:
 
-**Homework (HW)** - 90 points + **23** extra-credit points
+**Homework (HW)** - **90** points + **23** extra-credit points
 
 * Implement concepts from class along with a report
 * 9 homework assignments (HW0 -- HW8), each worth 10 points
