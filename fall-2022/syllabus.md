@@ -1,6 +1,6 @@
 # W&M DATA 440-03 - Web Science, Fall 2022 Syllabus
 
-[Jump to Summary Schedule](#summary-schedule) | [Download printable PDF version - Coming soon](#)
+[Jump to Summary Schedule](#summary-schedule)
 
 ## Course Overview
 
