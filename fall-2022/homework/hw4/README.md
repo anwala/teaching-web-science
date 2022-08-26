@@ -42,7 +42,7 @@ Other helpful references:
 * [Labs for the Standard Product Track in Python](https://github.com/twitterdev/getting-started-with-the-twitter-api-v2-for-academic-research/blob/main/modules/6b-labs-code-standard-python.md) - look at the section headings to find the appropriate part to read
 * [Twitter's User object model](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/user) - explains the data structure returned from the Twitter API
 * [process-tweets.py](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/process_tweets.py) - shows examples of accessing different parts of the data structure returned from the Twitter API
-
+<!--
 ## Extra Credit
 
 ### Q3. *(1 points)* 
@@ -56,7 +56,7 @@ Twitter friendships can be uni-directional or bi-directional.
 *Q: How many friendships do you have on Twitter?*  
 
 List the usernames of those who have a bi-directional relationships with you. (If there are more than 20, put the list in a separate file in your repo and provide the filename in your report.)
-
+-->
 ## Submission
 
 Make sure that you have committed and pushed your local repo to your private GitHub repo (inside the `hw4` folder).  Your repo should include your report, images, code, and data you developed to answer the questions. Include "Ready to grade @anwala" in your final commit message. 

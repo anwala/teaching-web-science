@@ -88,7 +88,7 @@ accurate methods if you prefer, just explain your method.
 Don't forget the log base 2 for IDF, and mind your [significant digits](https://en.wikipedia.org/wiki/Significant_figures#Rounding_and_decimal_places).
 
 *You must discuss in your report how you computed the values (especially IDF) and provide the formulas you used for TF, IDF, and TF-IDF.*  
-
+<!--
 ## Extra Credit
 
 ### Q3. *(2 points)* 
@@ -96,7 +96,7 @@ Compute the [Kendall Tau_b score](https://en.wikipedia.org/wiki/Kendall_rank_cor
 
 ### Q4. *(3 points)*  
 Build a simple (i.e., no positional information) inverted file (in ASCII) for all the words from your 1000 URIs.  Upload the entire file to your GitHub repo and discuss an interesting portion of the file in your report.
-
+-->
 ## Submission
 
 Make sure that you have committed and pushed your local repo to your private GitHub repo (inside the `hw3` folder).  Your repo should include your report, images, code, and data you developed to answer the questions.  Include "Ready to grade @anwala" in your final commit message. 

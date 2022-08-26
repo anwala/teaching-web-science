@@ -55,11 +55,12 @@ Compare the connected components of the Girvan-Newman split graph (Q2) with the 
 
 
 ## Extra Credit
-
+<!--
 ### Q4. *(2 points)*
 We know the group split into two different groups.  Suppose the disagreements in the group were more nuanced.  What would the clubs look like if they split into 3, 4, and 5 groups?  A single node can be considered as a "group".
+-->
 
-### Q5. *(2 or 4 or 6 points)*
+### Q4. *(2 or 4 or 6 points)*
 Use D3.js's force-directed graph layout to draw the Karate Club Graph before the split. Color the nodes according to the factions they belong to (John A or Mr. Hi). After a button is clicked, split the graph based on the original graph split. Include a link to the HTML/JavaScript files (or Observable notebook) in your report and all necessary screenshots.
 * If you load a new file containing the split upon button press, this EC is worth 2 points.
 * If you modify the nodes and edges using D3 (without loading a new file), this EC is worth 4 points.
