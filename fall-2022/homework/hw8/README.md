@@ -86,7 +86,7 @@ Cluster the accounts using k-Means, using `k`=5,10,20 (see Module 12, slide 34).
 *C: Which `k` value created the most reasonable clusters?  For that grouping, characterize the accounts that were clustered into each group.*
 
 ## Extra Credit
-
+<!--
 ### Q5 - Create MDS Image (1 point)
 
 Use MDS to create a JPEG of the accounts (see Module 12, slide 42).  Include the JPEG in your report. 
@@ -98,14 +98,14 @@ Use MDS to create a JPEG of the accounts (see Module 12, slide 42).  Include the
 ### Q6 - Generate Nicer Dendrogram (not ASCII art) (1 point)
 
 Generate the dendrogram figure from Q3 using [scipy's dendrogram](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.dendrogram.html) or [plotly's create_dendrogram](https://plotly.com/python/dendrogram/). The clusters should be the same those in Q3.
+-->
+### Q5 - Generate Nicer MDS Image (2 points)
 
-### Q7 - Generate Nicer MDS Image (3 points)
-
-Generate the MDS figure from Q5 as a scatterplot using regular Python graphing libraries or Vega-Lite/D3.  Plot the labels (could be in addition to the points or in place of the points) or allow the user to mouse-over the points and display the labels (i.e., tooltips). The figure won't look exactly like Q5 since the initial placement is random, but it should be similar. 
+Generate an MDS figure of the accounts (see Module 12, slide 42) as a scatterplot using regular Python graphing libraries or Vega-Lite/D3.  Plot the labels (could be in addition to the points or in place of the points) or allow the user to mouse-over the points and display the labels (i.e., tooltips).
 
 Place a file with the full list in your repo. List the top 10 and bottom 10 movies in your report.
 
-### Q8 - Generate Account-Term Matrix with TF-IDF (3 points)
+### Q6 - Generate Account-Term Matrix with TF-IDF (2 points)
 
 Re-generate the account-term matrix but this time process the terms using proper TF-IDF calculations instead of the hack discussed on slide 12 (p. 12).  Use the same 500 terms, but this time replace their frequency count with TF-IDF scores (similar to as computed in HW3). Document the code, techniques, methods, etc. used to generate these TF-IDF values.  Upload the new account-term matrix file to GitHub.
 *  For this IDF computation, you can use the tweets you gathered in Q1 as your corpus (instead of searching Google for each term). Treat the set of tweets from each account as a single document.

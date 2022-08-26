@@ -120,7 +120,7 @@ For each film, generate a list of the top 5 most correlated and bottom 5 least c
 * If you have not heard of the recommended movies, search for the movie's trailer on YouTube and watch it before you answer.  If you do this, include the link to the trailer in your report.  For example, the [trailer for "Top Gun (1986)"](https://www.youtube.com/watch?v=xa_z57UatDY) was found by searching for "top gun 1986 trailer" on Google.   
 
 ## Extra Credit
-
+<!--
 ### Q5 *(2 points)*
 
 Filter the MovieLens dataset so that it only contains movies with at least 10 ratings.  
@@ -130,24 +130,24 @@ Filter the MovieLens dataset so that it only contains movies with at least 10 ra
 Re-do Q3 and Q4 using this dataset.  
 
 *B: Do you think the recommendations have improved?*
-
-### Q6 *(2 points)*  
+-->
+### Q5 *(1 points)*  
 
 Rank all 1682 movies in the 1997/1998 MovieLens dataset.  (*Rank*, not rate. These should be 1-1682.) Break any ties based on number of raters (for example, a movie with an average rating of 4 with 100 raters should be ranked higher than a movie with an average rating of 4 with only 50 raters).
 
 Place a file with the full list in your repo. List the top 10 and bottom 10 movies in your report.
 
-### Q7 *(3 points)*  
+### Q6 *(1 points)*  
 
 Rank the 1682 movies in the 1997/1998 MovieLens dataset according to [today's IMDB data](https://www.imdb.com/interfaces/).  Note that the IMDB data includes TV shows and other items that aren't movies. Break any ties based on number of raters (for example, a movie with an average rating of 7.2 with 10,000 raters should be ranked higher than a movie with a rating of 7.2 with only 9,000 raters).
 
 Place a file with the full list in your repo.  List the top 10 and bottom 10 movies in your report.
 
-### Q8 *(3 point)*
+### Q7 *(1 point)*
 
-*You must have done both Q6 and Q7 to complete this question.*
+*You must have done both Q5 and Q6 to complete this question.*
 
-Draw a scatterplot where each dot is a film (i.e., 1682 dots).  The x-axis is the MovieLens ranking (Q6) and the y-axis is today's IMDB ranking (Q7).  Note that the MovieLens ratings are 1-5 and the IMDB ratings are 1-10, so you may want to normalize the data before plotting.  *The scatterplot must be created in R or Python, no Excel.*
+Draw a scatterplot where each dot is a film (i.e., 1682 dots).  The x-axis is the MovieLens ranking (Q5) and the y-axis is today's IMDB ranking (Q6).  Note that the MovieLens ratings are 1-5 and the IMDB ratings are 1-10, so you may want to normalize the data before plotting.  *The scatterplot must be created in R or Python, no Excel.*
 
 *A: Describe any interesting outliers.*
 

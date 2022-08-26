@@ -70,7 +70,7 @@ Tune your classifier by updating weights to obtain better classification results
 
 If your classifier got all of the items correct in Q2, change the weights to make the classifier perform worse and discuss the results.
 
-### Q6 *(4 points)* 
+### Q6 *(3 points)* 
 
 Implement the classifier with the Multinomial model instead of the multiple Bernoulli model and re-run Q2 and Q3.  Did the classification improve? *Ensure to remove the unique word filter from the extractor.*
 
