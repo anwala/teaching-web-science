@@ -25,7 +25,7 @@ Dr. Alexander C. Nwala
 
 After completing this course, you should be able to do the following:
 
-* Explain the interdisciplinary nature of web sciencen and the main components of web architecture.
+* Explain the interdisciplinary nature of web science and the main components of web architecture.
 * Explain how search engines index and rank webpages given a query.
 * Explain the impact of social networks on how information (and disinformation) is spread on the web.
 * Write Python code to interact with various web APIs and services, including web servers, web archives, Memento aggregators, and the Twitter API.
@@ -83,7 +83,7 @@ I will post all assignments on our the [DATA 440-03 Github repo](https://github.
 
 * Implement concepts from class along with a report
 * 9 homework assignments (HW0 -- HW8), each worth 10 points
-* Released on Saturdays and usually due 2 weeks later on Sunday
+* Released on Saturdays and usually due 1.5 -- 2 weeks later
 * *Don't wait until the last minute --- these are hard and time-consuming!*
 * Grading scale: 0 -- 10
   * 2 points are reserved for the required report
@@ -93,9 +93,10 @@ I will post all assignments on our the [DATA 440-03 Github repo](https://github.
 *There is no mid-term*
 
 **Participation/Attendance** - 10 points
+
 Participation is very important, it improves learning and contributes additional dimensions to discussions. I'd encourage participation by assigning scores to the following activities throughout the semester:
 * 1 point maximum per week: Engaging in productive discussions in class: asking/answering questions and contributing new ideas
-* 1 point maximum per week: Posting a solution or a question replying to on Piazza
+* 1 point maximum per week: Posting a solution or replying to a question on Piazza
 
 **Final exam** - 10 points
 
@@ -162,7 +163,7 @@ This course at ODU was originally developed by my PhD supervisor [Dr. Michael Ne
 
 ### Piazza
 
-Each student must check the class Piazza (DATA 440-03) daily. You should use our class Piazza forum to ask and answer general course-related questions. I will use Piazza to notify you about important updates (assignment deadline changes, office hours cancellations, etc.).
+Each student must check the class [Piazza (DATA 440-03)](https://piazza.com/class/l3k72ehiq8z40r) daily. You should use our class Piazza forum to ask and answer general course-related questions. I will use Piazza to notify you about important updates (assignment deadline changes, office hours cancellations, etc.).
 
 ### Participation
 
