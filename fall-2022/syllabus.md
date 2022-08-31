@@ -1,4 +1,4 @@
-<img align="left" width="80" height="80" src="https://raw.githubusercontent.com/anwala/teaching-web-science/main/fall-2022/wm_vertical_stacked_full_color.png" alt="wm_vertical_stacked_full_color">
+<img align="left" width="120" height="120" src="https://raw.githubusercontent.com/anwala/teaching-web-science/main/fall-2022/wm_vertical_stacked_full_color.png" alt="wm_vertical_stacked_full_color">
 
 # W&M DATA 440-03 - Web Science, Fall 2022 Syllabus
 
