@@ -1,6 +1,8 @@
+<img align="left" width="80" height="80" src="#" alt="wm_vertical_stacked_full_color">
+
 # W&M DATA 440-03 - Web Science, Fall 2022 Syllabus
 
-[Jump to Summary Schedule](#summary-schedule)
+[Jump to Summary Schedule](#summary-schedule) | [Self](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/syllabus.md)
 
 ## Course Overview
 
