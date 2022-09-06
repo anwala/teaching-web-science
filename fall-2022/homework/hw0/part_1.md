@@ -23,7 +23,7 @@ data440/
 ```
 This is where you'd submit all your assignments. Since this is a private Github repo, only you and your collaborators would have access to it. Please add me as a collaborator:```Settings > Collaborators > Add people > type "anwala" > Press select a collaborator above```.
 
-## Markdown (1 points)
+## Markdown (2 points)
 
 1. From the `hw0` folder of your private GitHub assignment repo, create a new Markdown file named `hw0_report.md` and copy the content from [data440_report_template.md](data440_report_template.md) into it. 
 
@@ -39,7 +39,7 @@ This is where you'd submit all your assignments. Since this is a private Github 
 
 7. Finally, make sure that your `hw0` folder in your GitHub assignments repo contains the final version of your edited report file (`hw0_report.md`) and your included image.  In your final commit, use the commit message `@anwala ready to grade`.
 
-## LaTeX and Overleaf (1 points + 2 extra-credit points)
+## LaTeX and Overleaf (2 points + 2 extra-credit points)
 
 To receive up to 2 extra-credit points, reports must be written in LaTeX (not Markdown) and compiled into a PDF document. [Overleaf](https://overleaf.com) provides an online setup for writing and compiling LaTeX into PDF.  You will need to sign up for a free [Overleaf](https://overleaf.com) account. Alternatively, you may run LaTeX locally to generate your PDF.
 
