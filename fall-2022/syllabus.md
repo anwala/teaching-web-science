@@ -46,6 +46,7 @@ We will be using Python this semester. You are not required to know Python ahead
 
 Here are some good Intro to Python resources:
 
+* [Python Tutorial](https://www.w3schools.com/python/default.asp)
 * [Introduction to Python](http://introtopython.org/)
 * [CS 1110: Introduction to Computing Using Python](http://www.cs.cornell.edu/courses/cs1110/2012fa/) (Cornell University)
 * [A Gentle Introduction to Programming Using Python](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-189-a-gentle-introduction-to-programming-using-python-january-iap-2011/lectures/) (MIT)
