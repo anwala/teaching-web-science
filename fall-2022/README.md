@@ -8,7 +8,7 @@
 
 ## Summary Schedule
 
-|Week |Lecture Dates|Topic|Homeworks (Date assigned -- Due Date)
+|Week |Lecture Dates|Topic|Homework (Date assigned -- Due Date)
 |---|---|---|---|
 |1|Sep  1 &  6|Introduction to Web Science and Web Architecture| [HW0](homework/hw0) - Getting started, Sep 1 -- 13
 |2|Sep  8 & 13|Introduction to Python| [Python Google Colab notebook](week-2/data_440_03_f22_mod_02_python.ipynb)<br/>[Python lab exercises](week-2/data_440_03_f22_mod_02_lab.ipynb)<br/> [HW1](homework/hw1) - Web Sci. Intro, Sep 13 -- 27
