@@ -80,7 +80,7 @@ There will be a total of **110 points** (90 points for assignments, 10 points fo
 
 ### Assignment Types
 
-I will post all assignments on our the [DATA 440-02 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2023/homework). Usually the new repo will only contain a `README.md` file with the assignment instructions.  For some assignments, the repo may also contain data files needed to complete the assignment. Your grade in this class will be based on the following components:
+I will post all assignments on the [DATA 440-02 Github repo](https://github.com/anwala/teaching-web-science/tree/main/fall-2023/homework). Each HW directory would contain a `README.md` file with the assignment instructions. Some assignments may also contain data files needed to complete the assignment. Your grade in this class would be based on the following components:
 
 **Homework (HW)** - **90** points + **5** extra-credit points
 
