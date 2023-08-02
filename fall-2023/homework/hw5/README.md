@@ -1,5 +1,5 @@
 # Homework 5 - Graph Partitioning
-**Due:** Tuesday, November 15, 2022 by 11:59pm
+**Due:** November 14, 2023 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
@@ -10,12 +10,11 @@ Write a report that answers and *explains how you arrived at the answers* to the
 
 Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw5_report` with the proper file extension.
 
-
 (**Report (2 points**)
 
 ### Q1. Color nodes based on final split (2 points)
 
-Draw the original Karate club graph (before the split) and color the nodes according to the factions they belong to (John A or Mr. Hi).  This should look similar to the graph on slide 92 - all edges should be present, just indicate the nodes in the eventual split by color.
+Draw the original Karate club graph (before the split) and color the nodes according to the factions they belong to (John A or Mr. Hi). This should look similar to the graph on slide 92 - all edges should be present, just indicate the nodes in the eventual split by color.
 
 *Q: How many nodes (students) eventually go with John and how many with Mr. Hi?*
  
@@ -58,13 +57,16 @@ Compare the connected components of the Girvan-Newman split graph (Q2) with the 
 <!--
 ### Q4. *(2 points)*
 We know the group split into two different groups.  Suppose the disagreements in the group were more nuanced.  What would the clubs look like if they split into 3, 4, and 5 groups?  A single node can be considered as a "group".
--->
 
 ### Q4. *(2 or 4 or 6 points)*
 Use D3.js's force-directed graph layout to draw the Karate Club Graph before the split. Color the nodes according to the factions they belong to (John A or Mr. Hi). After a button is clicked, split the graph based on the original graph split. Include a link to the HTML/JavaScript files (or Observable notebook) in your report and all necessary screenshots.
 * If you load a new file containing the split upon button press, this EC is worth 2 points.
 * If you modify the nodes and edges using D3 (without loading a new file), this EC is worth 4 points.
 * If you use D3 transitions to move the nodes and edges to their new locations, this EC is worth 6 points.
+-->
+### Q4. *(2 points)*
+Use D3.js's force-directed graph layout to draw the Karate Club Graph before the split. Color the nodes according to the factions they belong to (John A or Mr. Hi). After a button is clicked, split the graph based on the original graph split. Include a link to the HTML/JavaScript files (or Observable notebook) in your report and all necessary screenshots.
+* If you load a new file containing the split upon button press, this EC is worth 2 points.
 
 ## Submission
 
