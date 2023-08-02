@@ -6,7 +6,7 @@ Read through the entire assignment before starting.  *Do not wait until the last
 
 The goal of this assignment is to use the basic recommendation principles we have learned to recommend movies for yourself.
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw7_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `hw7_report` with the proper file extension.
 
 (**Report (2 points**)
 
@@ -136,7 +136,7 @@ Re-do Q3 and Q4 using this dataset.
 Rank all 1682 movies in the 1997/1998 MovieLens dataset.  (*Rank*, not rate. These should be 1-1682.) Break any ties based on number of raters (for example, a movie with an average rating of 4 with 100 raters should be ranked higher than a movie with an average rating of 4 with only 50 raters).
 
 Place a file with the full list in your repo. List the top 10 and bottom 10 movies in your report.
-
+<!--
 ### Q6 *(1 points)*  
 
 Rank the 1682 movies in the 1997/1998 MovieLens dataset according to [today's IMDB data](https://www.imdb.com/interfaces/).  Note that the IMDB data includes TV shows and other items that aren't movies. Break any ties based on number of raters (for example, a movie with an average rating of 7.2 with 10,000 raters should be ranked higher than a movie with a rating of 7.2 with only 9,000 raters).
@@ -150,7 +150,7 @@ Place a file with the full list in your repo.  List the top 10 and bottom 10 mov
 Draw a scatterplot where each dot is a film (i.e., 1682 dots).  The x-axis is the MovieLens ranking (Q5) and the y-axis is today's IMDB ranking (Q6).  Note that the MovieLens ratings are 1-5 and the IMDB ratings are 1-10, so you may want to normalize the data before plotting.  *The scatterplot must be created in R or Python, no Excel.*
 
 *A: Describe any interesting outliers.*
-
+-->
 ## Submission
 
 Make sure that you have committed and pushed your local repo to your private GitHub repo (inside the `hw7` folder).  Your repo should include your report, images, code, and data you developed to answer the questions. Include "Ready to grade @anwala" in your final commit message. 

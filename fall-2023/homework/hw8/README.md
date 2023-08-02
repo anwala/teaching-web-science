@@ -1,5 +1,5 @@
 # Homework 8 - Clustering
-**Due:** Thursday, December 8, 2022 by 11:59pm
+**Due:** December 7, 2023 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
@@ -11,20 +11,18 @@ The goal of this assignment is to cluster Twitter accounts based on the content 
 **Tips for Completing this Assignment:**
 * Your first reference should be the [Module 12 lecture slides](https://docs.google.com/presentation/d/1QK7Of4o0gzYl2e0fSCOXuHlVMNflIUVJ/edit?usp=sharing), class [Colab notebook](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-12/data_440_03_f22_mod_12_pci_ch_03.ipynb), and *Programming Collective Intelligence* book and [Chapter 3 code](https://github.com/arthur-e/Programming-Collective-Intelligence/tree/master/chapter3). *Don't start with a Google search.*
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw8_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `hw8_report` with the proper file extension.
 
 (**Report (2 points**)
 
 ## Questions
 
 ### Q1 - Find Popular Twitter Accounts (2 point)
-Generate a list of 100 popular accounts on Twitter. The accounts must be verified, have 10,000+ followers, and have 5000+ tweets.  For example:
-* [`@acnwala`](https://twitter.com/acnwala) - is not verified, ~440 followers, ~2800 tweets - *don't include*
-* [`@williamandmary`](https://twitter.com/williamandmary) - verified (blue checkmark), 35,000+ followers, 9,000+ tweets - *could include*
+Generate a list of at least 50 popular accounts on Twitter. The accounts must be verified, have 10,000+ followers, and have 5000+ tweets.  For example:
+* [`@acnwala`](https://twitter.com/acnwala) - is not verified, ~440 followers, ~3200 tweets - *don't include*
+* [`@williamandmary`](https://twitter.com/williamandmary) - verified (blue checkmark), 35,000+ followers, 9,000+ tweets - *could include*  
 
-See [Twarc API user_lookup](https://twarc-project.readthedocs.io/en/latest/api/client/#twarc.client.Twarc.user_lookup), [GET users/lookup](https://developer.twitter.com/en/docs/accounts-and-users/follow-search-get-users/api-reference/get-users-lookup),  and [User object](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/user) for details on obtaining this information for a set of accounts.  
-
-You may also generate this information manually by visiting individual account pages. You only need 100 popular accounts, so manual selection might be justified.
+Generate this information manually by visiting individual account pages. You only need at least 50 popular accounts.
 
 Because we're trying to cluster the accounts based on the text in their tweets, you should choose several sets of accounts that are similar (political, tech, sports, etc.) to see if they'll get clustered together later.
 
@@ -99,12 +97,12 @@ Use MDS to create a JPEG of the accounts (see Module 12, slide 42).  Include the
 
 Generate the dendrogram figure from Q3 using [scipy's dendrogram](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.dendrogram.html) or [plotly's create_dendrogram](https://plotly.com/python/dendrogram/). The clusters should be the same those in Q3.
 -->
-### Q5 - Generate Nicer MDS Image (2 points)
+### Q5 - Generate Nicer MDS Image (1 points)
 
 Generate an MDS figure of the accounts (see Module 12, slide 42) as a scatterplot using regular Python graphing libraries or Vega-Lite/D3.  Plot the labels (could be in addition to the points or in place of the points) or allow the user to mouse-over the points and display the labels (i.e., tooltips).
 
 Place a file with the full list in your repo. List the top 10 and bottom 10 movies in your report.
-
+<!--
 ### Q6 - Generate Account-Term Matrix with TF-IDF (2 points)
 
 Re-generate the account-term matrix but this time process the terms using proper TF-IDF calculations instead of the hack discussed on slide 12 (p. 12).  Use the same 500 terms, but this time replace their frequency count with TF-IDF scores (similar to as computed in HW3). Document the code, techniques, methods, etc. used to generate these TF-IDF values.  Upload the new account-term matrix file to GitHub.
@@ -113,7 +111,7 @@ Re-generate the account-term matrix but this time process the terms using proper
 Then re-do Q3 with the new matrix.  Compare and contrast the resulting dendrogram with the dendrogram from Q3.
 
 Note: Ideally you would not reuse the same 500 terms and instead would come up with TF-IDF scores for all the terms and then choose the top 500 from that list, but I'm trying to limit the amount of work necessary.
-
+-->
 ## Submission
 
 Make sure that you have committed and pushed your local repo to your private GitHub repo (inside the `hw8` folder).  Your repo should include your report, images, code, and data you developed to answer the questions. Include "Ready to grade @anwala" in your final commit message. 

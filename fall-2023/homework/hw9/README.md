@@ -1,5 +1,5 @@
 # Final exam - Email Classification
-**Due:** Tuesday, December 20, 2022 by 11:59pm
+**Due:** December 19, 2022 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
@@ -15,7 +15,7 @@ The goal of this assignment is to classify emails into two groups based on topic
     * [Class Colab notebook](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-13/data_440_03_f22_mod_13_pci_ch_06.ipynb)
     * [*Programming Collective Intelligence* book](https://go.oreilly.com/old-dominion-university/library/view/programming-collective-intelligence/9780596529321/) and [Chapter 6 code](https://github.com/arthur-e/Programming-Collective-Intelligence/tree/master/chapter6)
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `final_exam_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `final_exam_report` with the proper file extension.
 
 (**Report (2 points**)
 
@@ -63,7 +63,7 @@ Draw a confusion matrix for your classification results (see Module 13, [slides 
 ### Q4 *(1 point)* 
 
 Report the [precision and recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall) scores of your classification results.  Include the formulas you used to compute these values.
-
+<!--
 ### Q5 *(2 points)* 
 
 Tune your classifier by updating weights to obtain better classification results. You may want to change the default weights (`weight`, `ap`) given to `weightedprob()` or the threshold used for the Bayesian classifier or change how the words are extracted from the document (for this you will need to re-train the model).  Report the changes you made, re-run your Testing dataset, and show that the performance improved (either by using the confusion matrix or by computing precision and recall).
@@ -75,7 +75,7 @@ If your classifier got all of the items correct in Q2, change the weights to mak
 Implement the classifier with the Multinomial model instead of the multiple Bernoulli model and re-run Q2 and Q3.  Did the classification improve? *Ensure to remove the unique word filter from the extractor.*
 
 *For credit on this part, you must describe what you have done and discuss the differences between the Multinomial model and the multiple Bernoulli model.*
-
+-->
 ## Submission
 
 Make sure that you have committed and pushed your local repo to your private GitHub repo (inside the `final_exam` folder).  Your repo should include your report, images, code, and data you developed to answer the questions. Include "Ready to grade @anwala" in your final commit message. 
