@@ -1,5 +1,5 @@
 # Homework 2 - Archiving the Web
-**Due:** Tuesday, October 11, 2022 by 11:59pm
+**Due:** October 10, 2022 by 11:59pm
  *This assignment is going to take time. Read through the entire assignment before starting. *Do not wait until the last minute to start working on it.*
 
 **Important:** Q1 requires obtaining a Twitter Developer Account (see [Twitter Setup](/fall-2022/homework/hw0/twitter_setup.md)).  This may take a day or two, so if you haven't already done this, get started today.
