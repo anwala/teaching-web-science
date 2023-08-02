@@ -13,7 +13,7 @@ Write a report that contains the answers and *explains how you arrived at the an
 
 (**Report (2 points**)
 
-### Q. Friendship Paradox on Facebook (8 points)
+### Q1. Friendship Paradox on Facebook (8 points)
 
 Determine if the friendship paradox holds for a user's Facebook account. *(This used to be more interesting when you could more easily download your friend's friends list from Facebook. Facebook now requires each friend to approve this operation, effectively making it impossible.)* 
 
