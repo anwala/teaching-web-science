@@ -1,5 +1,5 @@
 # Homework 7 - Recommender system
-**Due:** Tuesday, December 1, 2022 by 11:59pm
+**Due:** November 30, 2023 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment

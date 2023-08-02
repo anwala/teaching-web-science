@@ -1,5 +1,5 @@
 # Homework 6 - Creating (good) social bots
-**Due:** Tuesday, November 22, 2022 by 11:59pm
+**Due:** November 21, 2023 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
@@ -10,7 +10,7 @@ However, not all bots are bad. In this assignment you will prove this point by c
 
 Your Twitter bot must post tweets on a special Twitter account created by you.
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw6_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `hw6_report` with the proper file extension.
 
 
 (**Report (2 points**)
@@ -25,8 +25,7 @@ Express yourself, be creative. Alternatively, consider improving a [pre-existing
 
 ### Useful resources
 
-* Step-by-step guide to [create a Twitter bot](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-10/data_440_03_f22_mod_10_twitter_bot.ipynb)
-* [A comprehensive guide for using the Twitter API v2 with Tweepy in Python (No. 19)](https://dev.to/twitterdev/a-comprehensive-guide-for-using-the-twitter-api-v2-using-tweepy-in-python-15d9)
+* Step-by-step guide to [create a Twitter bot](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/week-10/data_440_02_f23_mod_10_twitter_bot.ipynb)
 
 ## Submission
 
