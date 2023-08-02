@@ -1,6 +1,6 @@
 # Homework 4 - Exploring Social Networks
-**Due:** Thursday, November 3, 2022 by 11:59pm
-Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
+**Due:** November 2, 2023 by 11:59pm
+Read through the entire assignment before starting. *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
 
@@ -13,7 +13,7 @@ Write a report that contains the answers and *explains how you arrived at the an
 
 (**Report (2 points**)
 
-### Q1. Friendship Paradox on Facebook (4 points)
+### Q. Friendship Paradox on Facebook (8 points)
 
 Determine if the friendship paradox holds for a user's Facebook account. *(This used to be more interesting when you could more easily download your friend's friends list from Facebook. Facebook now requires each friend to approve this operation, effectively making it impossible.)* 
 
@@ -25,7 +25,7 @@ Create a graph of the number of friends (y-axis) and the friends themselves (x-a
 on the x-axis: 1, 2, 3,..., n should be sufficient. Include the user in the graph in the appropriate sorted position (count the number of their friends) and label as *U*.
 
 *Q: Does the friendship paradox hold for this user and their friends on Facebook?*
- 
+<!--
 ### Q2. Friendship Paradox on Twitter (4 points)
 
 Determine if the friendship paradox holds for your Twitter account. Since Twitter is a directed graph, use *followers* as the value you measure (i.e., "do your followers have more followers than you?").  
@@ -42,7 +42,7 @@ Other helpful references:
 * [Labs for the Standard Product Track in Python](https://github.com/twitterdev/getting-started-with-the-twitter-api-v2-for-academic-research/blob/main/modules/6b-labs-code-standard-python.md) - look at the section headings to find the appropriate part to read
 * [Twitter's User object model](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/user) - explains the data structure returned from the Twitter API
 * [process-tweets.py](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/process_tweets.py) - shows examples of accessing different parts of the data structure returned from the Twitter API
-<!--
+
 ## Extra Credit
 
 ### Q3. *(1 points)* 
