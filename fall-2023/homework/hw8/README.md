@@ -28,8 +28,6 @@ Because we're trying to cluster the accounts based on the text in their tweets, 
 
 Save the list of accounts (screen_names), one per line, in a text file named `accounts.txt` and upload to your GitHub repo.
 
-*A: How did you choose to collect the accounts?*
-
 *B: What topics/categories do the accounts belong to?  You don't need to specify a grouping for each account, but what general topics/categories will you expect to be revealed by the clustering? Provide a this list before generating your clusters*
 
 ### Q2 - Create Account-Term Matrix (3 points)
