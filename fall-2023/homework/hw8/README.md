@@ -34,11 +34,10 @@ Save the list of accounts (screen_names), one per line, in a text file named `ac
 
 Before we can run the clustering code from the PCI book, we have to build an account-term matrix (like the [blog-term matrix](https://github.com/arthur-e/Programming-Collective-Intelligence/blob/master/chapter3/blogdata.txt) in the Module 12 slides). Consider the Twitter accounts equivalent to blogs, and all account tweets, the words of the blog.
 
-The PCI book provided code for creating the blog-term matrix given a list of blog feeds. I've provided similar code written by Dr. Michele Weigle's:
-* [tweet_parser.py](tweet_parser.py) - This is similar to the feedparser library mentioned on pg. 31.  It contains two functions used by `generate_tweet_vector.py`:
-    * `setup_api(filename)` - set up and return a Twitter API object, `filename` is the file containing your API keys
-    * `parse(api, screen_name, num_tweets=100)` - use Twarc2 to download about 100 tweets (excluding replies and retweets) from the timeline of the `screen_name` account and return a dictionary with the following structure:   
-    `{'screen_name': screen_name, 'tweets': [tweet1, tweet2, ...]}`
+The PCI book provided code for creating the blog-term matrix given a list of blog feeds. I've provided similar code originally written by Dr. Michele Weigle in 2021 and modified my me in 2023:
+* [tweet_parser.py](tweet_parser.py) - This is similar to the feedparser library mentioned on pg. 31.  It contains the `parse()` function:
+    * `parse(browser_dets, screen_name, num_tweets=50)` - use playwright to scrape Twitter and download about 50 tweets from the timeline of the `screen_name` account and return a dictionary with the following structure:   
+    `{'screen_name': screen_name, 'tweets': [tweet 1 text, tweet 2 text, ...]}`
 
 * [generate_tweet_vector.py](generate_tweet_vector.py) - This is similar to [`generatefeedvector.py`](https://github.com/arthur-e/Programming-Collective-Intelligence/blob/master/chapter3/generatefeedvector.py) described on pgs. 31-33 in PCI.  It contains main code and two functions:
     * `getwordcounts(api, screen_name)` - calls `parse()` from `tweet_parser.py` and returns the screen_name and a dictionary of word counts appearing in that account's tweets, almost exactly like `getwordcounts()` in our examples

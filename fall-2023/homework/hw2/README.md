@@ -1,5 +1,5 @@
 # Homework 2 - Archiving the Web
-**Due:** October 10, 2022 by 11:59pm
+**Due:** October 10, 2023 by 11:59pm
  *This assignment is going to take time. Read through the entire assignment before starting. *Do not wait until the last minute to start working on it.*
 
 **Important:** Q1 requires obtaining a Twitter Developer Account (see [Twitter Setup](/fall-2022/homework/hw0/twitter_setup.md)).  This may take a day or two, so if you haven't already done this, get started today.
@@ -18,11 +18,8 @@ Write a report that contains the answers and *explains how you arrived at the an
 
 Extract 1000 unique links from tweets in Twitter.
 
-Setup for this task:
-* Obtain a Twitter Developer Account (see [Twitter Setup](/fall-2022/homework/hw0/twitter_setup.md))
-* You may use [`get_tweets.py`](/fall-2022/homework/hw0/get_tweets.py) and [`process_tweets.py`](/fall-2022/homework/hw0/process_tweets.py)). Modify them as needed.
-
 Main steps:
+* Create a special Twitter account
 * Write a Python program that collects English-language tweets that contain links. See [Collecting Tweets](#collecting-tweets).
 * Write a Python program that extracts the links shared in tweets. See [Extracting Links from Tweets](#extracting-links-from-tweets).
 * Resolve all URIs to their final target URI (i.e., the one that responds with a 200). See [Resolve URIs to Final Target URI](#resolve-uris-to-final-target-uri).
@@ -32,20 +29,18 @@ Main steps:
 
 #### Collecting Tweets
 
-You'll likely need to collect more than 1000 tweets initially to get 1000 unique links.
-
-There are [rate limits](https://developer.twitter.com/en/docs/twitter-api/rate-limits) (number of API calls per amount of time) associated with different types of API calls to Twitter, but twarc will handle the rate limits for you. Meaning, if you ask twarc to deliver more tweets than it is allowed per time, it will pause until it's able to complete your request.
+[Scrape tweets](https://github.com/anwala/teaching-web-science/tree/main/fall-2023/week-3/twitter-scraper#example-2-extract-tweets-from-search) from the Twitter Search Engine Result Page (SERP). You'll likely need to collect more than 1000 tweets initially to get 1000 unique links. 
 
 Feel free to use multiple keywords to extract tweet. For example, you could collect 250 tweets each about 5 different keywords.  Use keywords (e.g., `'covid'`, `'olympics'`, `'vaccine'`) and not "stopwords" (e.g., `test`, `the`, `tweet`).  
 
 #### Extracting Links from Tweets
 
-Links in tweets are stored in the `['entities']['urls']` part of the [tweet dictionary structure](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/tweet).  This has several components:
+Links in tweets are stored in the `['entities']['urls']` part of the [tweet dictionary structure](https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/object-model/tweet).  This has several components:
 * `'url'` - The shortened URI (usually starting with https://t.co/)
 * `'expanded_url'` - The actual URI that was input by the user (i.e., not shortened)
 * `'display_url'` - The text of the URI that is displayed in the tweet (counted as part of the 280-character limit in the tweet)
 
-Since we want the actual URIs, you want to extract the `'expanded_url'` version of the link.  There's an example in `process_tweets.py`.
+Since we want the actual URIs, you want to extract the `'expanded_url'` version of the link. There's an example in [`process_tweets.py`](process_tweets.py).
 
 We will be analyzing the content in these links in a later assignment, so you want links that will likely contain some text.  
 * Exclude links from the Twitter domain (twitter.com) -- these will likely be references to other tweets or images

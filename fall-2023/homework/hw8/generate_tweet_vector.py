@@ -3,20 +3,20 @@
 # Based on generatefeedvector.py from 
 # https://github.com/arthur-e/Programming-Collective-Intelligence/blob/master/chapter3/generatefeedvector.py
 
-from tweetparser import setup_api, parse
+from tweet_parser import parse
 import re
 import json
 from os.path import exists
 
-def getwordcounts(api, screen_name):
+def getwordcounts(browser_dets, screen_name):
     '''
-    api: Twitter API object
+    browser_dets: playwright object needed to scrape Twitter
     screen_name: Twitter screen_name
     returns screen_name and dictionary of word counts for a Twitter account
     '''
     
     # Parse the Twitter feed
-    d = parse(api, screen_name)
+    d = parse(browser_dets, screen_name)
     wc = {}
 
     # Loop over all the entries
@@ -69,22 +69,26 @@ def readcounts():
 # MAIN CODE STARTS HERE
 #####
 
-# set up Twitter API object
-api = setup_api("/Users/mweigle/Library/Application Support/twarc/config")
+# set up Twitter scraper
+from playwright.sync_api import sync_playwright
+from scrape_twitter import get_auth_twitter_pg
+playwright = sync_playwright().start()
+browser_dets = get_auth_twitter_pg(playwright)
+
 
 apcount = {}      # number of accounts each word appears in
 wordcounts = {}   # words and frequency in each account
 sumcounts = {}    # words and frequency over all accounts (to determine most popular)
 
 # list of screen names should be in 'accounts.txt', one per line
-accountlist = [line.strip() for line in open('accounts.txt')]
+accountlist = [line.strip() for line in open('accounts.txt') if line.strip() != '']
 
 # only request new tweets if the data hasn't previously been written out
 if (not exists("apcount.txt") or not exists("sumcounts.txt") or not exists("wordcounts.txt")):
     for screen_name in accountlist:
         try:
             # get tweets, filter and count words
-            (user, wc) = getwordcounts(api, screen_name)
+            (user, wc) = getwordcounts(browser_dets, screen_name)
             wordcounts[user] = wc
         
             # count number of accounts each term appears in
@@ -151,3 +155,6 @@ with open('tweet_term_matrix.txt', 'w') as outf:
             else:
                 outf.write('\t0')
         outf.write('\n')
+
+
+playwright.stop()
