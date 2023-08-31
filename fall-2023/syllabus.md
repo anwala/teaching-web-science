@@ -171,6 +171,13 @@ Regularly stay involved in class activities. This includes checking Piazza for a
 
 The course Piazza forum should be your first reference for questions about the class. If you have questions about the course requirements or materials, post your questions on Piazza. For extra help, attend [office hours](https://alexandernwala.com/contact/).
 
+#### Graduate Teaching Assistant Support
+
+This course is supported by our cohort of graduate teaching assistants, who will be available to help you with python troubleshooting.  Note these GTA's may not have expertise in the specific topics being taught in this course, but will be well versed in programming.  They will be available in ISC 2250 during the following hours:
+* Tuesday: 9AM - 11AM; 5PM - 10PM
+* Thursday: 9AM - 11AM; 5PM - 10PM
+* Saturday: 9AM - 6PM
+
 ### [Student Accessibility Services](https://www.wm.edu/offices/deanofstudents/services/studentaccessibilityservices/)
 
 W&M's Student Accessibility Services offer a variety of services (e.g., [Watson Lab](https://www.wm.edu/offices/deanofstudents/services/studentaccessibilityservices/students/services/watsonlab/index.php) and [special needs housing](https://www.wm.edu/offices/deanofstudents/services/studentaccessibilityservices/students/services/specialhousing/index.php)) for William & Mary students.

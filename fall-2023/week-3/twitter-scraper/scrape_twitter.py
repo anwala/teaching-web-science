@@ -221,9 +221,9 @@ def main():
         if( len(browser_dets) == 0 ):
             return
 
-        tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=250)
-        #tweets = get_search_tweets(browser_dets, 'william & mary', max_tweets=20)
-        write_tweets_to_jsonl_file('acnwala_timeline.json.gz', tweets['tweets'])
+        #tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=250)
+        tweets = get_search_tweets(browser_dets, 'kirk franklin', max_tweets=500)
+        write_tweets_to_jsonl_file('kirk.json.gz', tweets['tweets'])
         
 
         #post_tweet(browser_dets['page'], "Hello, World!\nWelcome to my timeline!")
