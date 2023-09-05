@@ -16,7 +16,7 @@ Solutions for an assignment must be uploaded into its [respective assignment fol
 
 All reports must include your name, class (DATA 440), assignment number/title, and dates.  You do not need a title page.
 
-You *may* complete your reports in Markdown or may choose to use LaTeX instead (for 2 extra-credit points).
+You *may* complete your reports in Markdown or may choose to use LaTeX instead.
 
 * I've provided a [Markdown report template](data440_report_template.md) for your modification and use.
 * Your Markdown report and all images referenced in the report must be included in your GitHub repo.
