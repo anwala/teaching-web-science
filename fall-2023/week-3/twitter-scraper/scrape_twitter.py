@@ -34,7 +34,8 @@ def scroll_down(page):
 
 def post_tweet(page, msg, button_name='Post', after_post_sleep=2.5):
     #Post, Reply
-    eval_str = f''' document.querySelectorAll('[aria-label="{button_name}"]')[0].click(); '''
+    # [id$='someId'] will match all ids ending with someId: https://stackoverflow.com/a/8714421
+    eval_str = f''' document.querySelectorAll('[aria-label$="{button_name}"]')[0].click(); '''
     page.evaluate(eval_str)
     time.sleep(1)
     page.keyboard.type(msg, delay=20)
@@ -232,18 +233,19 @@ def main():
         if( len(browser_dets) == 0 ):
             return
 
+        #time.sleep(10000)
         #tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=5)
         #tweets = get_search_tweets(browser_dets, 'williamsburg', max_tweets=20)
         #write_tweets_to_jsonl_file('wm.json.gz', tweets['tweets'])
     
-        #post_tweet(browser_dets['page'], f"\nTesting posting with sleep afterwards @ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        post_tweet(browser_dets['page'], f"\nTesting posting @ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         
         #reply to tweet
-        #'''
+        '''
         browser_dets['page'].goto('https://twitter.com/xnwala/status/1699844461545836833')
         time.sleep(3)
         post_tweet(browser_dets['page'], "Interesting!", button_name='Reply')
-        #'''
+        '''
 
 if __name__ == "__main__":
     main()
