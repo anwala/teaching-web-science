@@ -2,6 +2,7 @@ import sys
 import time
 
 from bs4 import BeautifulSoup
+from datetime import datetime
 from NwalaTextUtils.textutils import genericErrorInfo
 from NwalaTextUtils.textutils import getLinks
 
@@ -31,13 +32,16 @@ def scroll_up(page):
 def scroll_down(page):
     page.evaluate("window.scrollTo( {'top': document.body.scrollHeight, 'left': 0, 'behavior': 'smooth'} );")
 
-def post_tweet(page, msg, button_name='Post'):
+def post_tweet(page, msg, button_name='Post', after_post_sleep=2.5):
     #Post, Reply
     eval_str = f''' document.querySelectorAll('[aria-label="{button_name}"]')[0].click(); '''
     page.evaluate(eval_str)
     time.sleep(1)
     page.keyboard.type(msg, delay=20)
     page.evaluate(''' document.querySelectorAll('[data-testid="tweetButton"]')[0].click(); ''')
+
+    #added because I observed that tweets were not posted without it
+    time.sleep(after_post_sleep)
 
     
 def color_tweet(page, tweet_link):
@@ -201,10 +205,10 @@ def get_auth_twitter_pg(playwright, callback_uri=''):
             print('\tauthenticated')
             if( callback_uri != '' ):
                 page.goto(callback_uri)
-                print(f'\tauthenticated, loaded {callback_uri}, sleeping for 3 seconds')
-                time.sleep(3)
-
-            
+                print(f'\tauthenticated, loaded {callback_uri}')
+                
+            print('\tsleeping for 3 seconds')
+            time.sleep(3)
             return {
                 'page': page,
                 'context': context,
@@ -215,24 +219,31 @@ def get_auth_twitter_pg(playwright, callback_uri=''):
 
 def main():
     
+    '''
+    token = 'abcde'
+    res = rehydrate_tweet('1288498682971795463', token=token)
+    print(res)
+    return
+    '''
+
     with sync_playwright() as playwright:
         
         browser_dets = get_auth_twitter_pg(playwright)
         if( len(browser_dets) == 0 ):
             return
 
-        #tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=250)
-        tweets = get_search_tweets(browser_dets, 'kirk franklin', max_tweets=500)
-        write_tweets_to_jsonl_file('kirk.json.gz', tweets['tweets'])
+        #tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=5)
+        #tweets = get_search_tweets(browser_dets, 'williamsburg', max_tweets=20)
+        #write_tweets_to_jsonl_file('wm.json.gz', tweets['tweets'])
+    
+        #post_tweet(browser_dets['page'], f"\nTesting posting with sleep afterwards @ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         
-
-        #post_tweet(browser_dets['page'], "Hello, World!\nWelcome to my timeline!")
-        #reply tweet
-        '''
-        browser_dets['page'].goto('https://twitter.com/stats_feed/status/1682085617872543754')
+        #reply to tweet
+        #'''
+        browser_dets['page'].goto('https://twitter.com/xnwala/status/1699844461545836833')
         time.sleep(3)
         post_tweet(browser_dets['page'], "Interesting!", button_name='Reply')
-        '''
+        #'''
 
 if __name__ == "__main__":
     main()
