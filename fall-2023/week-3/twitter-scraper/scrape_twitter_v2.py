@@ -71,11 +71,10 @@ def color_tweet(page, tweet_link):
 
 def get_tweet_ids_user_timeline_page(screen_name, page, max_tweets):
 
-    empty_result_count = 0
     prev_len = 0
-    tweets = []
+    empty_result_count = 0
+    
     tweet_links = set()
-    tweet_dets = {}
     break_flag = False
 
     while( True ):
@@ -108,43 +107,37 @@ def get_tweet_ids_user_timeline_page(screen_name, page, max_tweets):
                 continue
 
             #color_tweet(page, tweet_link)
-            tweet_dets[tweet_link] = {'datetime': tweet_datetime, 'is_retweet': is_retweet}
             tweet_links.add( tweet_link )
+            twt_id = tweet_link.split('/status/')[-1]
+            tweet_obj = rehydrate_tweet(twt_id)
+            if( len(tweet_obj) == 0 ):
+                print('\tOOPS! rehydration failed! patch rehydrate_tweet()')
+                continue
 
-            print( '\textracted {} tweets'.format(len(tweet_links)) )
+            print( '\ttweets {}, datetime: {}, is_retweet: {}'.format(len(tweet_links), tweet_datetime, is_retweet) )
+            print( f'\tdo stuff here with tweet_obj: {tweet_obj.keys()}\n' )
+            #call your functions here to do stuff with tweet_obj like writing links to text file
+
+
+
+
+
+
+            
             if( len(tweet_links) == max_tweets ):
-                break_flag = True
-                print(f'breaking reached ({len(tweet_links)}) maximum: {max_tweets}')
-                break
-        
-        if( break_flag is True ):
-            break
+                print(f'exiting reached ({len(tweet_links)}) maximum: {max_tweets}')
+                sys.exit(0)
 
         empty_result_count = empty_result_count + 1 if prev_len == len(tweet_links) else 0
         if( empty_result_count > 5 ):
-            print(f'No new tweets found, so breaking')
-            break
+            print(f'No new tweets found, so exiting')
+            sys.exit(0)
 
         prev_len = len(tweet_links)
         print('\tthrottling/scrolling, then sleeping for 2 second\n')
         scroll_down(page)
         time.sleep(2)
-
-
-    for tlink in tweet_links:
-
-        stat_screen_name, tid = tlink.split('/status/')
-        twt_uri_dets = {
-            'tid': tid,
-            'status_screen_name': stat_screen_name[1:],
-            'datetime': tweet_dets[tlink]['datetime']
-        }
-        twt_uri_dets['notes'] = {'timeline_screen_name': screen_name, 'is_retweet': tweet_dets[tlink]['is_retweet']}
-        tweets.append(twt_uri_dets)
-        
-
-    tweets = sorted(tweets, key=lambda x:x['tid'])
-    return tweets
+    
 
 def get_timeline_tweets(browser_dets, screen_name, max_tweets=20):
 
@@ -163,22 +156,19 @@ def get_timeline_tweets(browser_dets, screen_name, max_tweets=20):
 
     return payload
 
-def get_search_tweets(browser_dets, query, max_tweets=20):
+def stream_tweets(browser_dets, query, max_tweets=20):
 
     query = query.strip()
     if( max_tweets < 0  or len(browser_dets) == 0 or query == '' ):
         return {}
 
-    print('\nget_search_tweets():')
+    print('\nstream_tweets():')
     uri = 'https://twitter.com/search?q=' + quote_plus(query) + '&f=live&src=typd'
     
     payload = {'self': uri, 'tweets': []}
     browser_dets['page'].goto(uri)
     
-    tweet_ids = get_tweet_ids_user_timeline_page( '', browser_dets['page'], max_tweets )
-    payload['tweets'] = paral_rehydrate_tweets(tweet_ids)
-
-    return payload
+    get_tweet_ids_user_timeline_page( '', browser_dets['page'], max_tweets )
     
 def get_auth_twitter_pg(playwright, callback_uri=''):
     
@@ -220,32 +210,17 @@ def get_auth_twitter_pg(playwright, callback_uri=''):
 
 def main():
     
-    '''
-    token = 'abcde'
-    res = rehydrate_tweet('1288498682971795463', token=token)
-    print(res)
-    return
-    '''
-
+    if( len(sys.argv) != 3 ):
+        print(f'Usage example:\n\tpython {sys.argv[0]} "williamsburg" 20')
+        return
+   
     with sync_playwright() as playwright:
         
         browser_dets = get_auth_twitter_pg(playwright)
         if( len(browser_dets) == 0 ):
             return
-
-        #time.sleep(10000)
-        #tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=5)
-        #tweets = get_search_tweets(browser_dets, 'williamsburg', max_tweets=20)
-        #write_tweets_to_jsonl_file('wm.json.gz', tweets['tweets'])
-    
-        post_tweet(browser_dets['page'], f"\nTesting posting @ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         
-        #reply to tweet
-        '''
-        browser_dets['page'].goto('https://twitter.com/xnwala/status/1699844461545836833')
-        time.sleep(3)
-        post_tweet(browser_dets['page'], "Interesting!", button_name='Reply')
-        '''
+        stream_tweets(browser_dets, sys.argv[1], max_tweets=int(sys.argv[2]))
 
 if __name__ == "__main__":
     main()
