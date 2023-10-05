@@ -38,7 +38,7 @@ Links in tweets are stored in the `['entities']['urls']` part of the [tweet dict
 * `'expanded_url'` - The actual URI that was input by the user (i.e., not shortened)
 * `'display_url'` - The text of the URI that is displayed in the tweet (counted as part of the 280-character limit in the tweet)
 
-Since we want the actual URIs, you want to extract the `'expanded_url'` version of the link. There's an example in [`process_tweets.py`](process_tweets.py).
+Since we want the actual URIs, you want to extract the `'expanded_url'` version of the link. There's an example in [`process_tweets.py`](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/week-3/twitter-scraper/process_tweets.py).
 
 We will be analyzing the content in these links in a later assignment, so you want links that will likely contain some text.  
 * Exclude links from the Twitter domain (twitter.com) -- these will likely be references to other tweets or images
