@@ -5,7 +5,7 @@ The following is a description of a simple (naive) application for [scraping](ht
 
 ## Installation
 ```bash
-$ pip install -r requirements
+$ pip install -r requirements.txt
 $ playwright install
 ```
 
