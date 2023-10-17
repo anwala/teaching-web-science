@@ -1,5 +1,8 @@
+import os
 import sys
 import time
+
+from getpass import getpass
 
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -10,8 +13,10 @@ from playwright.sync_api import sync_playwright
 from urllib.parse import quote_plus
 
 from util import paral_rehydrate_tweets
+from util import readTextFromFile
 from util import rehydrate_tweet
 from util import write_tweets_to_jsonl_file
+from util import writeTextToFile
 
 def is_twitter_user_auth(links, cur_page_uri):
 
@@ -169,10 +174,41 @@ def stream_tweets(browser_dets, query, max_tweets=20):
     browser_dets['page'].goto(uri)
     
     get_tweet_ids_user_timeline_page( '', browser_dets['page'], max_tweets )
+
+def try_to_login(page, username, password):
+
+    print('\ntry_to_login()')
+    username = username.strip()
+    password = password.strip()
+
+    if( username == '' or password == '' ):
+        return
+        
+    page.get_by_role('textbox').fill(username)
+    page.keyboard.press('Enter')
+    page.get_by_label('Password', exact=True).type(password, delay=20)
+    page.keyboard.press('Enter')
+
     
-def get_auth_twitter_pg(playwright, callback_uri=''):
+def get_auth_twitter_pg(playwright, callback_uri='', do_unsafe_login=True):
     
     print('\nget_auth_twitter_pg()')
+    username = ''
+    password = ''
+
+    if( do_unsafe_login is True ):
+        print('\t--- Unsafe login ---')
+
+        if( os.path.exists('/tmp/unsafe_twitter_username.txt') and os.path.exists('/tmp/unsafe_twitter_password.txt') ):
+            username = readTextFromFile('/tmp/unsafe_twitter_username.txt').strip()
+            password = readTextFromFile('/tmp/unsafe_twitter_password.txt').strip()
+
+        if( username == '' or password == '' ):
+            username = input('\n\tEnter Twitter username: ')
+            password = getpass('\tEnter Twitter password: ')
+
+            writeTextToFile('/tmp/unsafe_twitter_username.txt', username)
+            writeTextToFile('/tmp/unsafe_twitter_password.txt', password)
 
     chromium = playwright.firefox #"chromium" or "firefox" or "webkit".
     browser = chromium.launch(headless=False)
@@ -181,12 +217,16 @@ def get_auth_twitter_pg(playwright, callback_uri=''):
     
     sleep_seconds = 3
     page.goto('https://twitter.com/login')
+
+    if( do_unsafe_login is True ):
+        time.sleep(sleep_seconds)
+        try_to_login(page, username, password)
     
     while( True ):
 
         print(f'\twaiting for login, sleeping for {sleep_seconds} seconds')
-        
         time.sleep(sleep_seconds)
+        
         page_html = page.content()
         page_links = getLinks(uri='', html=page_html, fromMainTextFlag=False)
         scroll_down(page)

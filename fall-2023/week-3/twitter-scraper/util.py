@@ -68,6 +68,37 @@ def paral_rehydrate_tweets(tweet_ids):
 
     return tweets
 
+def writeTextToFile(outfilename, text, extraParams=None):
+    
+    if( extraParams is None ):
+        extraParams = {}
+
+    if( 'verbose' not in extraParams ):
+        extraParams['verbose'] = True
+
+    try:
+        with open(outfilename, 'w') as outfile:
+            outfile.write(text)
+        
+        if( extraParams['verbose'] ):
+            print('\twriteTextToFile(), wrote:', outfilename)
+    except:
+        genericErrorInfo()
+
+def readTextFromFile(infilename):
+
+    text = ''
+
+    try:
+        with open(infilename, 'r') as infile:
+            text = infile.read()
+    except:
+        print('\treadTextFromFile()error filename:', infilename)
+        genericErrorInfo()
+    
+
+    return text
+
 def write_tweets_to_jsonl_file(outfilename, tweets):
 
     try:
