@@ -4,7 +4,7 @@ Read through the entire assignment before starting. *Do not wait until the last 
 
 ## Assignment
 
-You will investigate the [friendship paradox](http://en.wikipedia.org/wiki/Friendship_paradox) on Facebook and Twitter, which says "most people have fewer friends than their friends have, on average." 
+You will investigate the [friendship paradox](http://en.wikipedia.org/wiki/Friendship_paradox) on Facebook, which says "most people have fewer friends than their friends have, on average." 
 
 **Reminder about Programming Tasks:** For several of the programming tasks this semester, you will be asked to write code to operate on 100s or 1000s of data elements.  If you have not done this type of development before, I *strongly encourage* you to start small and work your way up.  Especially when you are using new tools or APIs, start on a small test dataset to make sure you understand how to use the tool and that your processing scripts are working before ramping up to the full set. *This will save you an enormous amount of time.*
 
