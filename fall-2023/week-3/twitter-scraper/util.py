@@ -39,7 +39,7 @@ def rehydrate_tweet(twt_id, user_agent='', token='418g769m7fi'):
         response = requests.request("GET", url, data=payload, headers=headers, params=querystring)
         return json.loads(response.text)
     except:
-        genericErrorInfo()
+        genericErrorInfo(f"Problem text:\n {response.text}\n")
 
     return {}
 

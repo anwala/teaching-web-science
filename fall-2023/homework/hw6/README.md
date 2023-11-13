@@ -23,10 +23,6 @@ Consider creating a bot to solve or partly solve a problem you care about --- ma
 
 Express yourself, be creative. Alternatively, consider improving a [pre-existing solution](https://botwiki.org/bots/) or tool. Provide an argument in your report for the reason your Twitter bot is original or innovative.
 
-### Useful resources
-
-* Step-by-step guide to [create a Twitter bot](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/week-10/data_440_02_f23_mod_10_twitter_bot.ipynb)
-
 ## Submission
 
 Make sure that you have committed and pushed your local repo to your private GitHub repo (inside the `hw6` folder).  Your repo should include your report, images, code, and data you developed to answer the questions. Include "Ready to grade @anwala" in your final commit message. 

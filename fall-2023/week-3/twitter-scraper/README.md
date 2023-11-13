@@ -66,11 +66,12 @@ with sync_playwright() as playwright:
         write_tweets_to_jsonl_file('twitter_serp.json.gz', tweets['tweets'])
 ```
 
-### Example 3: Post a tweet
+### Example 3: Post a tweet or reply to tweet
 
-The following code block posts the tweet `Hello, World!\nWelcome to my timeline!` on the authenticated user's timeline. The `post_tweet()` function does a simple post without checking if the content is within Twitter's character limit.
+The following code block posts the tweet `Hello, World!\nWelcome to my timeline!` on the authenticated user's timeline. The `post_tweet()` function does a simple post (or reply) without checking if the content is within Twitter's character limit.
 
 ```Python
+from datetime import datetime
 from playwright.sync_api import sync_playwright
 from scrape_twitter import get_auth_twitter_pg
 from scrape_twitter import post_tweet
@@ -79,26 +80,17 @@ with sync_playwright() as playwright:
         
     browser_dets = get_auth_twitter_pg(playwright)
     if( len(browser_dets) != 0 ):
-        post_tweet(browser_dets['page'], "Hello, World!\nWelcome to my timeline!")
-```
+        #True or False, post_tweet() should return the link of the newly posted tweet. 
+        get_new_tweet_link = True
 
-### Example 4: Reply to a tweet
+        #Twitter handle of account where message is to be posted
+        twitter_account = 'xnwala'
 
-The following code block posts the tweet `Hello, World!\nWelcome to my timeline!` on the authenticated user's timeline. The `post_tweet()` function does a simple post without checking if the content is within Twitter's character limit.
+        #reply_to_link should contain the link (e.g., 'https://twitter.com/xnwala/status/1699844461545836833') to the tweet to be replied to. Leave blank for isolated post
+        reply_to_link = ''
+         
+        msg = f"\nHello again folks!\nWelcome to my timeline! Posting @ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        post_status = post_tweet(browser_dets, msg, twitter_account=twitter_account, get_new_tweet_link=get_new_tweet_link, reply_to_link=reply_to_link)
 
-```Python
-import time
-from playwright.sync_api import sync_playwright
-from scrape_twitter import get_auth_twitter_pg
-from scrape_twitter import post_tweet
-
-with sync_playwright() as playwright:
-        
-    browser_dets = get_auth_twitter_pg(playwright)
-    if( len(browser_dets) != 0 ):
-        
-        browser_dets['page'].goto('https://twitter.com/stats_feed/status/1682085617872543754')
-        #Allow page to render so sleep. In the future consider using playwright's automated wait rather than time.sleep
-        time.sleep(3)
-        post_tweet(browser_dets['page'], "Very interesting!", button_name='Reply')
+        print('post_status:', post_status)
 ```
