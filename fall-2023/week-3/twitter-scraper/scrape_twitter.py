@@ -66,12 +66,14 @@ def post_tweet(browser_dets, msg, button_name='Post', after_post_sleep=2.5, **kw
     if( get_new_tweet_link is True and twitter_accnt != '' ):
         
         tweets = get_search_tweets( browser_dets, f'(from:{twitter_accnt})' )
+        tweets['tweets'] = sorted(tweets['tweets'], key=lambda k: k['id_str'], reverse=True)
+
         for t in tweets['tweets']:
             
-            if( t.get('text', '').strip() == msg.strip() ):
-                tweet_link = 'https://twitter.com/{}/status/{}'.format( t['user']['screen_name'], t['id_str'] )
-                print(f'\tposted tweet: {tweet_link}')
-                break
+            #assume first tweet is the most recent tweet (review logic)
+            tweet_link = 'https://twitter.com/{}/status/{}'.format( t['user']['screen_name'], t['id_str'] )
+            print(f'\tposted tweet: {tweet_link}')
+            break
     
     return {
         'tweet_link': tweet_link
@@ -182,13 +184,12 @@ def get_tweet_ids_user_timeline_page(screen_name, page, max_tweets):
 def get_timeline_tweets(browser_dets, screen_name, max_tweets=20):
 
     screen_name = screen_name.strip()
+    uri = f'https://twitter.com/{screen_name}/with_replies'
+    payload = {'self': uri, 'tweets': []}
     if( max_tweets < 0  or len(browser_dets) == 0 or screen_name == '' ):
         return {}
 
     print( f'\nget_timeline_tweets(): {screen_name}' )
-    uri = f'https://twitter.com/{screen_name}/with_replies'
-    
-    payload = {'self': uri, 'tweets': []}
     browser_dets['page'].goto(uri)
 
     tweet_ids = get_tweet_ids_user_timeline_page( screen_name, browser_dets['page'], max_tweets )
@@ -199,13 +200,12 @@ def get_timeline_tweets(browser_dets, screen_name, max_tweets=20):
 def get_search_tweets(browser_dets, query, max_tweets=20):
 
     query = query.strip()
+    uri = 'https://twitter.com/search?q=' + quote_plus(query) + '&f=live&src=typd'
+    payload = {'self': uri, 'tweets': []}
     if( max_tweets < 0  or len(browser_dets) == 0 or query == '' ):
-        return {}
+        return payload
 
     print('\nget_search_tweets():')
-    uri = 'https://twitter.com/search?q=' + quote_plus(query) + '&f=live&src=typd'
-    
-    payload = {'self': uri, 'tweets': []}
     browser_dets['page'].goto(uri)
     
     tweet_ids = get_tweet_ids_user_timeline_page( '', browser_dets['page'], max_tweets )

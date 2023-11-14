@@ -68,6 +68,7 @@ def paral_rehydrate_tweets(tweet_ids):
 
     return tweets
 
+
 def writeTextToFile(outfilename, text, extraParams=None):
     
     if( extraParams is None ):
