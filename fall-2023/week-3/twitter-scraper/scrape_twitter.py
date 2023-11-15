@@ -53,7 +53,10 @@ def post_tweet(browser_dets, msg, button_name='Post', after_post_sleep=2.5, **kw
 
     #Post, Reply
     # [id$='someId'] will match all ids ending with someId: https://stackoverflow.com/a/8714421
-    eval_str = f''' document.querySelectorAll('[aria-label$="{button_name}"]')[0].click(); '''
+    eval_str = f''' 
+    reply_bottons = document.querySelectorAll('[aria-label$="{button_name}"]');
+    reply_bottons[reply_bottons.length-1].click();
+    '''
     browser_dets['page'].evaluate(eval_str)
     time.sleep(1)
     browser_dets['page'].keyboard.type(msg, delay=20)
@@ -78,7 +81,6 @@ def post_tweet(browser_dets, msg, button_name='Post', after_post_sleep=2.5, **kw
     return {
         'tweet_link': tweet_link
     }
-
     
 def color_tweet(page, tweet_link):
 
@@ -228,7 +230,7 @@ def try_to_login(page, username, password):
     page.keyboard.press('Enter')
 
 
-def get_auth_twitter_pg(playwright, unsafe_cred_path=f'{os.path.dirname(os.path.abspath(sys.argv[0]))}/', callback_uri='', do_unsafe_login=True, headless=False):
+def get_auth_twitter_pg(playwright, unsafe_cred_path='./', callback_uri='', do_unsafe_login=True, headless=False):
     
     print('\nget_auth_twitter_pg()')
     unsafe_cred_path = unsafe_cred_path.strip()
@@ -247,6 +249,9 @@ def get_auth_twitter_pg(playwright, unsafe_cred_path=f'{os.path.dirname(os.path.
         if( os.path.exists(f'{unsafe_cred_path}unsafe_twitter_username.txt') and os.path.exists(f'{unsafe_cred_path}unsafe_twitter_password.txt') ):
             username = readTextFromFile(f'{unsafe_cred_path}unsafe_twitter_username.txt').strip()
             password = readTextFromFile(f'{unsafe_cred_path}unsafe_twitter_password.txt').strip()
+            
+            print(f'retrieved username from {unsafe_cred_path}unsafe_twitter_username.txt')
+            print(f'retrieved password from {unsafe_cred_path}unsafe_twitter_password.txt')
 
         if( username == '' or password == '' ):
             username = input('\n\tEnter Twitter username: ')
