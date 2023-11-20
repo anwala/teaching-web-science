@@ -257,6 +257,8 @@ def get_auth_twitter_pg(playwright, unsafe_cred_path='./', callback_uri='', do_u
             username = input('\n\tEnter Twitter username: ')
             password = getpass('\tEnter Twitter password: ')
 
+            username = username.strip()
+            password = password.strip()
             writeTextToFile(f'{unsafe_cred_path}unsafe_twitter_username.txt', username)
             writeTextToFile(f'{unsafe_cred_path}unsafe_twitter_password.txt', password)
 
@@ -293,7 +295,8 @@ def get_auth_twitter_pg(playwright, unsafe_cred_path='./', callback_uri='', do_u
             return {
                 'page': page,
                 'context': context,
-                'browser': browser
+                'browser': browser,
+                'authenticated_screen_name': username
             }
     
     return {}
