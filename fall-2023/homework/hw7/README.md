@@ -113,7 +113,7 @@ Provide a list of the top 5 recommendations for films that the *substitute you* 
 Provide a list of the bottom 5 recommendations (i.e., films the *substitute you* is almost certain to hate).
 
 ### Q4 (2 points)
-Choose your (the real you, not the *substitute you*) favorite and least favorite film from the data.  
+Choose your (the real you, not the *substitute you*) favorite and least favorite film from the list of 1,682 movies in `u.item`.  
 For each film, generate a list of the top 5 most correlated and bottom 5 least correlated films. 
 
 *Q: Based on your knowledge of the resulting films, do you agree with the results?*  In other words, do you personally like/dislike the resulting films?  
