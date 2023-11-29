@@ -4,7 +4,7 @@ Read through the entire assignment before starting.  *Do not wait until the last
 
 ## Assignment
 
-The goal of this assignment is to use the basic recommendation principles we have learned to recommend movies for yourself.
+The goal of this assignment is to use the basic recommendation principles we have learned to recommend movies for yourself. Utilize code from [Class notebook w/examples](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-11/data_440_03_f22_mod_11_pci_ch_02.ipynb); you're not expected to implement the core functionalities from scratch.
 
 Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `hw7_report` with the proper file extension.
 
