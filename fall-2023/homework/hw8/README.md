@@ -51,8 +51,7 @@ The PCI book provided code for creating the blog-term matrix given a list of blo
 `generate_tweet_vector.py` requires that you have `accounts.txt` (from Q1) and `tweet_parser.py` located in the same folder.  
 
 `generate_tweet_vector.py` will ***not work out-of-the-box***.  
-* First, on line 51, you'll need to insert the path to your Twarc config file.
-* Second, instead of creating an account-term matrix for every term in the tweets, I only want the 500 most popular terms that are not stopwords.  ***You will need to write this code.***  To help with this, I've added a `sumcounts` dict that holds the words and frequency of those words over all accounts and a blank list `popularlist` where you should store the 500 most frequent non-stopword terms. On line 88, you'll see a section labeled `# BEGIN YOUR CODE BLOCK`. This is where you'll add your code.
+* Instead of creating an account-term matrix for every term in the tweets, I only want the 500 most popular terms that are not stopwords.  ***You will need to write this code.***  To help with this, I've added a `sumcounts` dict that holds the words and frequency of those words over all accounts and a blank list `popularlist` where you should store the 500 most frequent non-stopword terms. On line 88, you'll see a section labeled `# BEGIN YOUR CODE BLOCK`. This is where you'll add your code.
 
 Once complete, `generate_tweet_vector.py` will produce two files that you need to upload to your GitHub repo:
 * `popular_terms.txt` - the list (one per line) of the 500 most frequent terms in the tweets
