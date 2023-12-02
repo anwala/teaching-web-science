@@ -5,16 +5,22 @@ import requests
 from NwalaTextUtils.textutils import parallelTask
 from NwalaTextUtils.textutils import genericErrorInfo
 
-def rehydrate_tweet(twt_id, user_agent=''):
+def rehydrate_tweet(twt_id, user_agent='', token='418g769m7fi'):
 
     #grandparent: https://github.com/JustAnotherArchivist/snscrape/issues/996
     #parent: https://github.com/JustAnotherArchivist/snscrape/issues/996#issuecomment-1615937362
     url = "https://cdn.syndication.twimg.com/tweet-result"
-    querystring = {"id": twt_id,"lang":"en"}
+    querystring = {"id": twt_id, "lang":"en", 'token': token}
+
+    ''' 
+        How to get token
+        1. visit https://platform.twitter.com/embed/Tweet.html?id=1288498682971795463
+        2. Inspect network traffic in developer tools to find URI of GET request which has token
+    '''
 
     payload = ""
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" if user_agent == '' else user_agent,
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/116.0" if user_agent == '' else user_agent,
         "Accept": "*/*",
         "Accept-Language": "en-US,en;q=0.5",
         "Accept-Encoding": "gzip, deflate, br",
@@ -28,12 +34,12 @@ def rehydrate_tweet(twt_id, user_agent=''):
         "Cache-Control": "no-cache",
         "TE": "trailers"
     }
-
+    
     try:
         response = requests.request("GET", url, data=payload, headers=headers, params=querystring)
         return json.loads(response.text)
     except:
-        genericErrorInfo()
+        genericErrorInfo(f"Problem text:\n {response.text}\n")
 
     return {}
 
@@ -61,6 +67,38 @@ def paral_rehydrate_tweets(tweet_ids):
         tweets.append(r['output'])
 
     return tweets
+
+
+def writeTextToFile(outfilename, text, extraParams=None):
+    
+    if( extraParams is None ):
+        extraParams = {}
+
+    if( 'verbose' not in extraParams ):
+        extraParams['verbose'] = True
+
+    try:
+        with open(outfilename, 'w') as outfile:
+            outfile.write(text)
+        
+        if( extraParams['verbose'] ):
+            print('\twriteTextToFile(), wrote:', outfilename)
+    except:
+        genericErrorInfo()
+
+def readTextFromFile(infilename):
+
+    text = ''
+
+    try:
+        with open(infilename, 'r') as infile:
+            text = infile.read()
+    except:
+        print('\treadTextFromFile()error filename:', infilename)
+        genericErrorInfo()
+    
+
+    return text
 
 def write_tweets_to_jsonl_file(outfilename, tweets):
 

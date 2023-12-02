@@ -136,12 +136,15 @@ def get_tweet_ids_user_timeline_page(screen_name, page, max_tweets):
                 tweet_datetime = tweet_link.get('datetime', '')
                 tweet_link = tweet_link.parent.get('href', '')
 
+            tweet_link = tweet_link.strip()
             if( tweet_link == '' ):
+                print('\ttweet_link is blank, skipping')
                 continue
 
 
-            if( screen_name != '' and is_retweet is False and tweet_link.startswith(f'/{screen_name}/') is False ):
+            if( screen_name != '' and is_retweet is False and tweet_link.lower().startswith(f'/{screen_name}/') is False ):
                 #This tweet was authored by someone else, NOT the owner of the timeline, and since it was not retweeted
+                print(f'\tskipping non-{screen_name} tweet, tweet_link: "{tweet_link}"')
                 continue
 
             #color_tweet(page, tweet_link)
@@ -317,25 +320,17 @@ def main():
         if( len(browser_dets) == 0 ):
             return
         
+        '''
+        #reply
         get_new_tweet_link = True
         twitter_account = 'xnwala'
         reply_to_link = 'https://twitter.com/xnwala/status/1699844461545836833'
-        
         msg = f"\nAnother testing reply, posting @ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
         post_tweet(browser_dets, msg, twitter_account=twitter_account, get_new_tweet_link=get_new_tweet_link, reply_to_link=reply_to_link)
         time.sleep(100000)
-
         '''
-        from playwright.sync_api import sync_playwright
-        from scrape_twitter import get_auth_twitter_pg
-        from scrape_twitter import post_tweet
 
-        with sync_playwright() as playwright:
-                
-            browser_dets = get_auth_twitter_pg(playwright)
-            if( len(browser_dets) != 0 ):
-                post_tweet(browser_dets, "Hello, World!\nWelcome to my timeline!")
-        '''
+        tweets = get_timeline_tweets(browser_dets, 'odu', max_tweets=20)
 
 if __name__ == "__main__":
     main()
