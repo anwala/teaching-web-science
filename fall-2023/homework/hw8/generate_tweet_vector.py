@@ -26,6 +26,7 @@ def getwordcounts(browser_dets, screen_name, num_tweets=50):
         infile = gzip.open(cache_filename, 'rb')
         d = json.loads(infile.read().decode('utf-8'))
         d['screen_name'] = screen_name
+        print(f'\treading cache {cache_filename}')
         
         infile.close()
     else:
@@ -39,7 +40,6 @@ def getwordcounts(browser_dets, screen_name, num_tweets=50):
                 outfile.write(json.dumps(d, ensure_ascii=False))
 
             print(f'\tsaving {cache_filename}')
-
     wc = {}
 
     # Loop over all the entries
