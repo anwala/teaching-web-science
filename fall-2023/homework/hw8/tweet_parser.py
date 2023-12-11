@@ -15,7 +15,7 @@ def parse(browser_dets, screen_name, num_tweets=50):
     tweet_data = []
     try:
         tweets = get_timeline_tweets(browser_dets, screen_name, max_tweets=num_tweets)
-        tweet_data = [t['text'] for t in tweets['tweets']]
+        tweet_data = [t['text'] for t in tweets['tweets'] if 'text' in t]
     except:
         genericErrorInfo()
   

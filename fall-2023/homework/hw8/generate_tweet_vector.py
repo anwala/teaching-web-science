@@ -3,6 +3,8 @@
 # Based on generatefeedvector.py from 
 # https://github.com/arthur-e/Programming-Collective-Intelligence/blob/master/chapter3/generatefeedvector.py
 
+import os
+import gzip
 from tweet_parser import parse
 import re
 import json
@@ -14,9 +16,30 @@ def getwordcounts(browser_dets, screen_name, num_tweets=50):
     screen_name: Twitter screen_name
     returns screen_name and dictionary of word counts for a Twitter account
     '''
+    print('getwordcounts():', screen_name)
     
-    # Parse the Twitter feed
-    d = parse(browser_dets, screen_name, num_tweets=50)
+    os.makedirs('./tweets-cache/', exist_ok=True)
+    cache_filename = f'./tweets-cache/{screen_name}.json.gz'
+    
+    if( exists(cache_filename) ):
+        #read tweets from file
+        infile = gzip.open(cache_filename, 'rb')
+        d = json.loads(infile.read().decode('utf-8'))
+        d['screen_name'] = screen_name
+        
+        infile.close()
+    else:
+        # Parse the Twitter feed
+        d = parse(browser_dets, screen_name, num_tweets=50)
+        
+        if( len(d['tweets']) != 0 ):
+            d['screen_name'] = screen_name
+            #write tweets to file
+            with gzip.open(cache_filename, 'wt') as outfile:
+                outfile.write(json.dumps(d, ensure_ascii=False))
+
+            print(f'\tsaving {cache_filename}')
+
     wc = {}
 
     # Loop over all the entries
