@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 import time
@@ -69,7 +70,9 @@ def post_tweet(browser_dets, msg, button_name='Post', after_post_sleep=2.5, **kw
     if( get_new_tweet_link is True and twitter_accnt != '' ):
         
         tweets = get_search_tweets( browser_dets, f'(from:{twitter_accnt})' )
-        tweets['tweets'] = sorted(tweets['tweets'], key=lambda k: k['id_str'], reverse=True)
+        tweets['tweets'] = [t for t in tweets['tweets'] if 'id_str' in t]
+        if( len(tweets['tweets']) != 0 ):
+            tweets['tweets'] = sorted(tweets['tweets'], key=lambda k: k['id_str'], reverse=True)
 
         for t in tweets['tweets']:
             
@@ -233,20 +236,23 @@ def try_to_login(page, username, password):
     page.keyboard.press('Enter')
 
 
-def get_auth_twitter_pg(playwright, unsafe_cred_path='./', callback_uri='', do_unsafe_login=True, headless=False):
+def get_auth_twitter_pg(playwright, callback_uri='', headless=False, **kwargs):
     
     print('\nget_auth_twitter_pg()')
-    unsafe_cred_path = unsafe_cred_path.strip()
+    unsafe_cred_path = kwargs.get('unsafe_cred_path', '')
+    browser_storage_path = kwargs.get('browser_storage_path', './playwright-browser-storage/')
 
-    if( unsafe_cred_path == '' ):
-        print('unsafe_cred_path is empty, returning')
-        return
-
-    unsafe_cred_path = unsafe_cred_path if unsafe_cred_path.endswith('/') else f'{unsafe_cred_path}/'
     username = ''
     password = ''
+    
+    unsafe_cred_path = unsafe_cred_path if unsafe_cred_path.endswith('/') or unsafe_cred_path == '' else f'{unsafe_cred_path}/'
+    browser_storage_path = browser_storage_path if browser_storage_path.endswith('/') or browser_storage_path == '' else f'{browser_storage_path}/'
 
-    if( do_unsafe_login is True ):
+    #give preference to browser_storage_path when both unsafe_cred_path and browser_storage_path are set
+    unsafe_cred_path = unsafe_cred_path if browser_storage_path == '' else ''
+    browser_storage_path = './playwright-browser-storage/' if unsafe_cred_path == '' and browser_storage_path == '' else browser_storage_path
+
+    if( unsafe_cred_path != '' ):
         print('\t--- Unsafe login ---')
 
         if( os.path.exists(f'{unsafe_cred_path}unsafe_twitter_username.txt') and os.path.exists(f'{unsafe_cred_path}unsafe_twitter_password.txt') ):
@@ -265,15 +271,22 @@ def get_auth_twitter_pg(playwright, unsafe_cred_path='./', callback_uri='', do_u
             writeTextToFile(f'{unsafe_cred_path}unsafe_twitter_username.txt', username)
             writeTextToFile(f'{unsafe_cred_path}unsafe_twitter_password.txt', password)
 
+    browser = None
     chromium = playwright.firefox #"chromium" or "firefox" or "webkit".
-    browser = chromium.launch(headless=headless)
-    context = browser.new_context()
-    page = context.new_page()
     
-    sleep_seconds = 3
-    page.goto('https://twitter.com/login')
+    if( browser_storage_path == '' ):
+        browser = chromium.launch(headless=headless)
+        context = browser.new_context()
+    else:
+        os.makedirs(browser_storage_path, exist_ok=True)
+        context = chromium.launch_persistent_context(browser_storage_path, headless=headless)
+    
 
-    if( do_unsafe_login is True ):
+    sleep_seconds = 3
+    page = context.new_page()
+    page.goto('https://twitter.com/login')
+    
+    if( unsafe_cred_path != '' ):
         time.sleep(sleep_seconds)
         try_to_login(page, username, password)
     
@@ -308,8 +321,9 @@ def main():
     
     '''
     token = 'abcde'
-    res = rehydrate_tweet('1288498682971795463', token=token)
-    print(res)
+    res = rehydrate_tweet('1834663', token=token)
+    print( json.dumps(res, ensure_ascii=True) )
+
     return
     '''
 

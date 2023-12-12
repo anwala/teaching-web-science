@@ -15,7 +15,7 @@ There are three primary ways to use this application as outlined by the followin
 
 ### Example 1: Extract tweets from timeline
 
-The following code block first loads `twitter.com` in the browser and waits for the user to login. Once the user is authenticated, it extracts a maximum of 20 tweets (`max_tweet = 20`) from the timeline of `@acnwala` using the `get_timeline_tweets()` function. Next it writes the retrieved tweets into a compressed `jsonl` file (`acnwala_timeline.json.gz`) using `write_tweets_to_jsonl_file().`
+The following code block first loads `twitter.com` in the browser and waits for the user to login. Once the user is authenticated, it extracts a maximum of 20 tweets (`max_tweet = 20`) from the timeline of `@acnwala` using the `get_timeline_tweets()` function. Next it writes the retrieved tweets into a compressed `jsonl` file (`acnwala_timeline.json.gz`) using `write_tweets_to_jsonl_file().` Note that once the user is authenticated, the browser state is stored in `playwright-browser-storage` (change by setting `get_auth_twitter_pg()`'s `browser_storage_path` parameter), so no login would NOT be required subsequently.
 
 ```Python
 from playwright.sync_api import sync_playwright
@@ -23,13 +23,30 @@ from scrape_twitter import get_auth_twitter_pg
 from scrape_twitter import get_timeline_tweets
 from util import write_tweets_to_jsonl_file
 
-with sync_playwright() as playwright:
+def main():
+
+    with sync_playwright() as playwright:
         
+        browser_dets = get_auth_twitter_pg(playwright)
+        if( len(browser_dets) != 0 ):
+        
+            tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=20)
+            write_tweets_to_jsonl_file('acnwala_timeline.json.gz', tweets['tweets'])
+
+    #OR without with statement
+    '''
+    playwright = sync_playwright().start()
     browser_dets = get_auth_twitter_pg(playwright)
-    if( len(browser_dets) != 0 ):
     
-        tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=20)
+    if( len(browser_dets) != 0 ):
+        tweets = get_timeline_tweets(browser_dets, 'acnwala', max_tweets=3)
         write_tweets_to_jsonl_file('acnwala_timeline.json.gz', tweets['tweets'])
+
+    playwright.stop()
+    '''
+
+if __name__ == "__main__":
+    main()
 ```
 
 The content of the `acnwala_timeline.json.gz` may be read line by line with the following,
@@ -57,13 +74,24 @@ from scrape_twitter import get_auth_twitter_pg
 from scrape_twitter import get_search_tweets
 from util import write_tweets_to_jsonl_file
 
-with sync_playwright() as playwright:
-        
+def main():
+    
+    playwright = sync_playwright().start()
     browser_dets = get_auth_twitter_pg(playwright)
+
     if( len(browser_dets) != 0 ):
     
-        tweets = get_search_tweets(browser_dets, 'william & mary', max_tweets=20)        
+        tweets = get_search_tweets(browser_dets, 'william & mary', max_tweets=10)        
         write_tweets_to_jsonl_file('twitter_serp.json.gz', tweets['tweets'])
+
+    playwright.stop()
+
+if __name__ == "__main__":
+    main()
+```
+Consider using the following to search for tweets containing links from `cnn.com` domain published between 2006-01-01 to 2006-12-31
+```python
+tweets = get_search_tweets(browser_dets, '"cnn.com" until:2006-12-31 since:2006-01-01', max_tweets=10)
 ```
 
 ### Example 3: Post a tweet or reply to tweet
