@@ -129,7 +129,7 @@ def get_tweet_ids_user_timeline_page(screen_name, page, max_tweets):
             
             t = articles[i]
             is_retweet = t.find('span', {'data-testid': 'socialContext'})
-            is_retweet = False if is_retweet is None else is_retweet.text.strip().lower().endswith(' reposted')
+            is_retweet = False if is_retweet is None else is_retweet.text.strip().lower().endswith(' retweeted')
             
             tweet_datetime = ''
             tweet_link = t.find('time')
@@ -203,13 +203,6 @@ def get_timeline_tweets(browser_dets, screen_name, max_tweets=20):
 
     tweet_ids = get_tweet_ids_user_timeline_page( screen_name, browser_dets['page'], max_tweets )
     payload['tweets'] = paral_rehydrate_tweets(tweet_ids)
-    payload['screen_name_details'] = {}
-
-    #get screen_name: user_details_map - start
-    for i in range(len(payload['tweets'])):
-        t = payload['tweets'][i]
-        payload['screen_name_details'][ t['user']['screen_name'] ] = t['user']
-    #get screen_name: user_details_map - end
 
     return payload
 
@@ -327,13 +320,13 @@ def get_auth_twitter_pg(playwright, callback_uri='', headless=False, **kwargs):
 
 def main():
     
-    '''
-    token = 'abcde'
-    res = rehydrate_tweet('1834663', token=token)
+    #'''
+    token = '122123'
+    res = rehydrate_tweet('1573024393751859200', token=token)
     print( json.dumps(res, ensure_ascii=True) )
 
     return
-    '''
+    #'''
 
     with sync_playwright() as playwright:
         

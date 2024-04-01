@@ -1,0 +1,5 @@
+*.json
+*.json.gz
+*.txt
+scratch.py
+private

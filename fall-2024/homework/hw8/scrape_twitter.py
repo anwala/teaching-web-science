@@ -37,18 +37,50 @@ def scroll_up(page):
 def scroll_down(page):
     page.evaluate("window.scrollTo( {'top': document.body.scrollHeight, 'left': 0, 'behavior': 'smooth'} );")
 
-def post_tweet(page, msg, button_name='Post', after_post_sleep=2.5):
+def post_tweet(browser_dets, msg, button_name='Post', after_post_sleep=2.5, **kwargs):
+
+    if( len(browser_dets) == 0 ):
+        return {}
+
+    get_new_tweet_link = kwargs.get('get_new_tweet_link', False)
+    twitter_accnt = kwargs.get('twitter_account', '')
+    reply_to_link = kwargs.get('reply_to_link', '')
+
+    if( reply_to_link != '' ):
+        button_name = 'Reply'
+        browser_dets['page'].goto(reply_to_link)
+        time.sleep(3)
+
     #Post, Reply
     # [id$='someId'] will match all ids ending with someId: https://stackoverflow.com/a/8714421
-    eval_str = f''' document.querySelectorAll('[aria-label$="{button_name}"]')[0].click(); '''
-    page.evaluate(eval_str)
+    eval_str = f''' 
+    reply_bottons = document.querySelectorAll('[aria-label$="{button_name}"]');
+    reply_bottons[reply_bottons.length-1].click();
+    '''
+    browser_dets['page'].evaluate(eval_str)
     time.sleep(1)
-    page.keyboard.type(msg, delay=20)
-    page.evaluate(''' document.querySelectorAll('[data-testid="tweetButton"]')[0].click(); ''')
+    browser_dets['page'].keyboard.type(msg, delay=20)
+    browser_dets['page'].evaluate(''' document.querySelectorAll('[data-testid="tweetButton"]')[0].click(); ''')
 
     #added because I observed that tweets were not posted without it
     time.sleep(after_post_sleep)
+    tweet_link = ''
 
+    if( get_new_tweet_link is True and twitter_accnt != '' ):
+        
+        tweets = get_search_tweets( browser_dets, f'(from:{twitter_accnt})' )
+        tweets['tweets'] = sorted(tweets['tweets'], key=lambda k: k['id_str'], reverse=True)
+
+        for t in tweets['tweets']:
+            
+            #assume first tweet is the most recent tweet (review logic)
+            tweet_link = 'https://twitter.com/{}/status/{}'.format( t['user']['screen_name'], t['id_str'] )
+            print(f'\tposted tweet: {tweet_link}')
+            break
+    
+    return {
+        'tweet_link': tweet_link
+    }
     
 def color_tweet(page, tweet_link):
 
@@ -76,10 +108,11 @@ def color_tweet(page, tweet_link):
 
 def get_tweet_ids_user_timeline_page(screen_name, page, max_tweets):
 
-    prev_len = 0
     empty_result_count = 0
-    
+    prev_len = 0
+    tweets = []
     tweet_links = set()
+    tweet_dets = {}
     break_flag = False
 
     while( True ):
@@ -103,57 +136,65 @@ def get_tweet_ids_user_timeline_page(screen_name, page, max_tweets):
                 tweet_datetime = tweet_link.get('datetime', '')
                 tweet_link = tweet_link.parent.get('href', '')
 
+            tweet_link = tweet_link.strip()
             if( tweet_link == '' ):
+                print('\ttweet_link is blank, skipping')
                 continue
 
 
-            if( screen_name != '' and is_retweet is False and tweet_link.startswith(f'/{screen_name}/') is False ):
+            if( screen_name != '' and is_retweet is False and tweet_link.lower().startswith(f'/{screen_name}/') is False ):
                 #This tweet was authored by someone else, NOT the owner of the timeline, and since it was not retweeted
+                print(f'\tskipping non-{screen_name} tweet, tweet_link: "{tweet_link}"')
                 continue
 
             #color_tweet(page, tweet_link)
+            tweet_dets[tweet_link] = {'datetime': tweet_datetime, 'is_retweet': is_retweet}
             tweet_links.add( tweet_link )
-            twt_id = tweet_link.split('/status/')[-1]
-            tweet_obj = rehydrate_tweet(twt_id)
-            if( len(tweet_obj) == 0 ):
-                print('\tOOPS! rehydration failed! patch rehydrate_tweet()')
-                continue
 
-            print( '\ttweets {}, datetime: {}, is_retweet: {}'.format(len(tweet_links), tweet_datetime, is_retweet) )
-            print( f'\tdo stuff here with tweet_obj: {tweet_obj.keys()}\n' )
-            #call your functions here to do stuff with tweet_obj like writing links to text file
-
-
-
-
-
-
-            
+            print( '\textracted {} tweets'.format(len(tweet_links)) )
             if( len(tweet_links) == max_tweets ):
-                print(f'exiting reached ({len(tweet_links)}) maximum: {max_tweets}')
-                sys.exit(0)
+                break_flag = True
+                print(f'breaking reached ({len(tweet_links)}) maximum: {max_tweets}')
+                break
+        
+        if( break_flag is True ):
+            break
 
         empty_result_count = empty_result_count + 1 if prev_len == len(tweet_links) else 0
         if( empty_result_count > 5 ):
-            print(f'No new tweets found, so exiting')
-            sys.exit(0)
+            print(f'No new tweets found, so breaking')
+            break
 
         prev_len = len(tweet_links)
         print('\tthrottling/scrolling, then sleeping for 2 second\n')
         scroll_down(page)
         time.sleep(2)
-    
+
+
+    for tlink in tweet_links:
+
+        stat_screen_name, tid = tlink.split('/status/')
+        twt_uri_dets = {
+            'tid': tid,
+            'status_screen_name': stat_screen_name[1:],
+            'datetime': tweet_dets[tlink]['datetime']
+        }
+        twt_uri_dets['notes'] = {'timeline_screen_name': screen_name, 'is_retweet': tweet_dets[tlink]['is_retweet']}
+        tweets.append(twt_uri_dets)
+        
+
+    tweets = sorted(tweets, key=lambda x:x['tid'])
+    return tweets
 
 def get_timeline_tweets(browser_dets, screen_name, max_tweets=20):
 
     screen_name = screen_name.strip()
+    uri = f'https://twitter.com/{screen_name}/with_replies'
+    payload = {'self': uri, 'tweets': []}
     if( max_tweets < 0  or len(browser_dets) == 0 or screen_name == '' ):
         return {}
 
     print( f'\nget_timeline_tweets(): {screen_name}' )
-    uri = f'https://twitter.com/{screen_name}/with_replies'
-    
-    payload = {'self': uri, 'tweets': []}
     browser_dets['page'].goto(uri)
 
     tweet_ids = get_tweet_ids_user_timeline_page( screen_name, browser_dets['page'], max_tweets )
@@ -161,19 +202,21 @@ def get_timeline_tweets(browser_dets, screen_name, max_tweets=20):
 
     return payload
 
-def stream_tweets(browser_dets, query, max_tweets=20):
+def get_search_tweets(browser_dets, query, max_tweets=20):
 
     query = query.strip()
-    if( max_tweets < 0  or len(browser_dets) == 0 or query == '' ):
-        return {}
-
-    print('\nstream_tweets():')
     uri = 'https://twitter.com/search?q=' + quote_plus(query) + '&f=live&src=typd'
-    
     payload = {'self': uri, 'tweets': []}
+    if( max_tweets < 0  or len(browser_dets) == 0 or query == '' ):
+        return payload
+
+    print('\nget_search_tweets():')
     browser_dets['page'].goto(uri)
     
-    get_tweet_ids_user_timeline_page( '', browser_dets['page'], max_tweets )
+    tweet_ids = get_tweet_ids_user_timeline_page( '', browser_dets['page'], max_tweets )
+    payload['tweets'] = paral_rehydrate_tweets(tweet_ids)
+
+    return payload
 
 def try_to_login(page, username, password):
 
@@ -189,29 +232,41 @@ def try_to_login(page, username, password):
     page.get_by_label('Password', exact=True).type(password, delay=20)
     page.keyboard.press('Enter')
 
-    
-def get_auth_twitter_pg(playwright, callback_uri='', do_unsafe_login=True):
+
+def get_auth_twitter_pg(playwright, unsafe_cred_path='./', callback_uri='', do_unsafe_login=True, headless=False):
     
     print('\nget_auth_twitter_pg()')
+    unsafe_cred_path = unsafe_cred_path.strip()
+
+    if( unsafe_cred_path == '' ):
+        print('unsafe_cred_path is empty, returning')
+        return
+
+    unsafe_cred_path = unsafe_cred_path if unsafe_cred_path.endswith('/') else f'{unsafe_cred_path}/'
     username = ''
     password = ''
 
     if( do_unsafe_login is True ):
         print('\t--- Unsafe login ---')
 
-        if( os.path.exists('/tmp/unsafe_twitter_username.txt') and os.path.exists('/tmp/unsafe_twitter_password.txt') ):
-            username = readTextFromFile('/tmp/unsafe_twitter_username.txt').strip()
-            password = readTextFromFile('/tmp/unsafe_twitter_password.txt').strip()
+        if( os.path.exists(f'{unsafe_cred_path}unsafe_twitter_username.txt') and os.path.exists(f'{unsafe_cred_path}unsafe_twitter_password.txt') ):
+            username = readTextFromFile(f'{unsafe_cred_path}unsafe_twitter_username.txt').strip()
+            password = readTextFromFile(f'{unsafe_cred_path}unsafe_twitter_password.txt').strip()
+            
+            print(f'retrieved username from {unsafe_cred_path}unsafe_twitter_username.txt')
+            print(f'retrieved password from {unsafe_cred_path}unsafe_twitter_password.txt')
 
         if( username == '' or password == '' ):
             username = input('\n\tEnter Twitter username: ')
             password = getpass('\tEnter Twitter password: ')
 
-            writeTextToFile('/tmp/unsafe_twitter_username.txt', username)
-            writeTextToFile('/tmp/unsafe_twitter_password.txt', password)
+            username = username.strip()
+            password = password.strip()
+            writeTextToFile(f'{unsafe_cred_path}unsafe_twitter_username.txt', username)
+            writeTextToFile(f'{unsafe_cred_path}unsafe_twitter_password.txt', password)
 
     chromium = playwright.firefox #"chromium" or "firefox" or "webkit".
-    browser = chromium.launch(headless=False)
+    browser = chromium.launch(headless=headless)
     context = browser.new_context()
     page = context.new_page()
     
@@ -243,24 +298,39 @@ def get_auth_twitter_pg(playwright, callback_uri='', do_unsafe_login=True):
             return {
                 'page': page,
                 'context': context,
-                'browser': browser
+                'browser': browser,
+                'authenticated_screen_name': username
             }
     
     return {}
 
 def main():
     
-    if( len(sys.argv) != 3 ):
-        print(f'Usage example:\n\tpython {sys.argv[0]} "williamsburg" 20')
-        return
-   
+    '''
+    token = 'abcde'
+    res = rehydrate_tweet('1288498682971795463', token=token)
+    print(res)
+    return
+    '''
+
     with sync_playwright() as playwright:
         
-        browser_dets = get_auth_twitter_pg(playwright)
+        unsafe_cred_path = f'/tmp/'
+        browser_dets = get_auth_twitter_pg(playwright, headless=False, unsafe_cred_path=unsafe_cred_path)
         if( len(browser_dets) == 0 ):
             return
         
-        stream_tweets(browser_dets, sys.argv[1], max_tweets=int(sys.argv[2]))
+        '''
+        #reply
+        get_new_tweet_link = True
+        twitter_account = 'xnwala'
+        reply_to_link = 'https://twitter.com/xnwala/status/1699844461545836833'
+        msg = f"\nAnother testing reply, posting @ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        post_tweet(browser_dets, msg, twitter_account=twitter_account, get_new_tweet_link=get_new_tweet_link, reply_to_link=reply_to_link)
+        time.sleep(100000)
+        '''
+
+        tweets = get_timeline_tweets(browser_dets, 'odu', max_tweets=20)
 
 if __name__ == "__main__":
     main()
