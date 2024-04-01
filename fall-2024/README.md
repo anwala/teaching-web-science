@@ -1,4 +1,4 @@
-# W&M DATA 440-02 - Web Science, Fall 2023
+# W&M DATA 691-03/440-07 - Web Science, Fall 2024
 
 ## Links
 
