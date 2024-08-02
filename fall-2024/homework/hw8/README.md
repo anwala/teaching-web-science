@@ -1,5 +1,5 @@
 # Homework 8 - Clustering
-**Due:** December 7, 2023 by 11:59pm
+**Due:** December 5, 2024 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment

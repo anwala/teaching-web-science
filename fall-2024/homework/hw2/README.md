@@ -1,5 +1,5 @@
 # Homework 2 - Archiving the Web
-**Due:** October 10, 2023 by 11:59pm
+**Due:** October 8, 2024 by 11:59pm
  *This assignment is going to take time. Read through the entire assignment before starting. *Do not wait until the last minute to start working on it.*
 
 ## Assignment

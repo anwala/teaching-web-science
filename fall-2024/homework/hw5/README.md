@@ -1,5 +1,5 @@
 # Homework 5 - Graph Partitioning
-**Due:** November 14, 2023 by 11:59pm
+**Due:** November 12, 2024 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment

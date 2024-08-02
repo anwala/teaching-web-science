@@ -1,5 +1,5 @@
 # Final exam - Email Classification
-**Due:** December 19, 2022 by 11:59pm
+**Due:** December 16, 2024 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment

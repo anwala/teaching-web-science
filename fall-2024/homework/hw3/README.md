@@ -1,5 +1,5 @@
 # Homework 3 - Ranking Webpages
-**Due:** October 19, 2023 by 11:59pm
+**Due:** October 17, 2024 by 11:59pm
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment

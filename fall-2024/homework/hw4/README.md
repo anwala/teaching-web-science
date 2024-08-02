@@ -1,5 +1,5 @@
 # Homework 4 - Exploring Social Networks
-**Due:** November 2, 2023 by 11:59pm
+**Due:** October 31, 2024 by 11:59pm
 Read through the entire assignment before starting. *Do not wait until the last minute to start working on it.* 
 
 ## Assignment

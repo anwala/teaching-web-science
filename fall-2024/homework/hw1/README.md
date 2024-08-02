@@ -1,5 +1,5 @@
 # Homework 1 - Web Science Intro
-**Due:** September 26, 2023 by 11:59pm
+**Due:** September 24, 2024 by 11:59pm
  *Read the entire assignment before starting.*
 
 ## Assignment
