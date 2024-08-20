@@ -1,6 +1,7 @@
 # Homework 2 - Archiving the Web
 **Due:** October 8, 2024 by 11:59pm
- *This assignment is going to take time. Read through the entire assignment before starting. *Do not wait until the last minute to start working on it.*
+
+*This assignment is going to take time. Read through the entire assignment before starting. Do not wait until the last minute to start working on it.*
 
 ## Assignment
 
@@ -8,7 +9,7 @@ Write a report that contains the answers and *explains how you arrived at the an
 
 **Note about Programming Tasks:** For several of the programming tasks this semester, you will be asked to write code to operate on 100s or 1000s of data elements.  If you have not done this type of development before, I *strongly encourage* you to start small and work your way up.  Especially when you are using new tools or APIs, start on a small test dataset to make sure you understand how to use the tool and that your processing scripts are working before ramping up to the full set. *This will save you an enormous amount of time.*
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw2_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/homework/hw0/reports.md).  Name your report for this assignment `hw2_report` with the proper file extension.
 
 (**Report (2 points**)
 
@@ -23,11 +24,11 @@ Main steps:
 * Resolve all URIs to their final target URI (i.e., the one that responds with a 200). See [Resolve URIs to Final Target URI](#resolve-uris-to-final-target-uri).
 * Save only unique final URIs (no repeats). See [Save Only Unique URIs](#save-only-unique-uris).
   * if after this step, you don't have 1000 unique URIs, go back and gather more until you are able to get at least 1000 unique URIs
-* Save this collection of 1000 unique links in a file and upload it to your repo in GitHub -- we'll use it again in [HW3](/fall-2022/homework/hw3/README.md)
+* Save this collection of 1000 unique links in a file and upload it to your repo in GitHub -- we'll use it again in [HW3](/fall-2024/homework/hw3/README.md)
 
 #### Collecting Tweets
 
-[Scrape tweets](https://github.com/anwala/teaching-web-science/tree/main/fall-2023/week-3/twitter-scraper#example-2-extract-tweets-from-search) from the Twitter Search Engine Result Page (SERP). You'll likely need to collect more than 1000 tweets initially to get 1000 unique links. 
+[Scrape tweets](https://github.com/anwala/teaching-web-science/tree/main/fall-2024/week-3/twitter-scraper#example-2-extract-tweets-from-search) from the Twitter Search Engine Result Page (SERP). You'll likely need to collect more than 1000 tweets initially to get 1000 unique links. 
 
 Feel free to use multiple keywords to extract tweet. For example, you could collect 250 tweets each about 5 different keywords.  Use keywords (e.g., `'covid'`, `'olympics'`, `'vaccine'`) and not "stopwords" (e.g., `test`, `the`, `tweet`).  
 
@@ -38,7 +39,7 @@ Links in tweets are stored in the `['entities']['urls']` part of the [tweet dict
 * `'expanded_url'` - The actual URI that was input by the user (i.e., not shortened)
 * `'display_url'` - The text of the URI that is displayed in the tweet (counted as part of the 280-character limit in the tweet)
 
-Since we want the actual URIs, you want to extract the `'expanded_url'` version of the link. There's an example in [`process_tweets.py`](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/week-3/twitter-scraper/process_tweets.py).
+Since we want the actual URIs, you want to extract the `'expanded_url'` version of the link. There's an example in [`process_tweets.py`](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/week-3/twitter-scraper/process_tweets.py).
 
 We will be analyzing the content in these links in a later assignment, so you want links that will likely contain some text.  
 * Exclude links from the Twitter domain (twitter.com) -- these will likely be references to other tweets or images
@@ -76,7 +77,7 @@ Obtain the [TimeMaps](http://www.mementoweb.org/guide/quick-intro/) for each of 
 
 There are two options for running MemGator locally:
 * Install a stand-alone version of MemGator on your own machine, see https://github.com/oduwsdl/MemGator/releases
-  * This was described in [How to Install MemGator](/fall-2022/homework/hw2/install_memgator.md)
+  * This was described in [How to Install MemGator](/fall-2023/homework/hw2/install_memgator.md)
 * Install [Docker Desktop](https://www.docker.com/products/docker-desktop) and run MemGator as a Docker Container, see notes at https://github.com/oduwsdl/MemGator/blob/master/README.md
 
 **Important:** Obtaining TimeMaps requires contacting several different web archives for each URI-R.  *This process will take time.*

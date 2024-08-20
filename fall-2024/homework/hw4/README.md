@@ -1,5 +1,6 @@
 # Homework 4 - Exploring Social Networks
 **Due:** October 31, 2024 by 11:59pm
+
 Read through the entire assignment before starting. *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
@@ -8,7 +9,7 @@ You will investigate the [friendship paradox](http://en.wikipedia.org/wiki/Frien
 
 **Reminder about Programming Tasks:** For several of the programming tasks this semester, you will be asked to write code to operate on 100s or 1000s of data elements.  If you have not done this type of development before, I *strongly encourage* you to start small and work your way up.  Especially when you are using new tools or APIs, start on a small test dataset to make sure you understand how to use the tool and that your processing scripts are working before ramping up to the full set. *This will save you an enormous amount of time.*
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw4_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `hw4_report` with the proper file extension.
 
 
 (**Report (2 points**)
@@ -36,12 +37,12 @@ If you have less than 50 followers on Twitter, then you can do the analysis for 
 
 *Q: Does the friendship paradox hold for you and your followers on Twitter?*
 
-You may use Twarc2 in Python to access the Twitter API to find a user's followers.  The code to access the Twitter API should be similar to [get_tweets.py](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/get_tweets.py), you may use that to start.
+You may use Twarc2 in Python to access the Twitter API to find a user's followers.  The code to access the Twitter API should be similar to [get_tweets.py](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/get_tweets.py), you may use that to start.
 
 Other helpful references:
 * [Labs for the Standard Product Track in Python](https://github.com/twitterdev/getting-started-with-the-twitter-api-v2-for-academic-research/blob/main/modules/6b-labs-code-standard-python.md) - look at the section headings to find the appropriate part to read
 * [Twitter's User object model](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/user) - explains the data structure returned from the Twitter API
-* [process-tweets.py](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/process_tweets.py) - shows examples of accessing different parts of the data structure returned from the Twitter API
+* [process-tweets.py](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/process_tweets.py) - shows examples of accessing different parts of the data structure returned from the Twitter API
 
 ## Extra Credit
 

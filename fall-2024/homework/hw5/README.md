@@ -1,6 +1,7 @@
 # Homework 5 - Graph Partitioning
 **Due:** November 12, 2024 by 11:59pm
-Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
+
+Read through the entire assignment before starting. *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
 
@@ -8,7 +9,7 @@ You will investigate the split of the Karate Club (Zachary, 1977), described sta
 
 Write a report that answers and *explains how you arrived at the answers* to the following questions. Include any interesting findings that you discover from your analysis.
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/homework/hw0/reports.md).  Name your report for this assignment `hw5_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/homework/hw0/reports.md).  Name your report for this assignment `hw5_report` with the proper file extension.
 
 (**Report (2 points**)
 
@@ -37,14 +38,14 @@ Compare the connected components of the Girvan-Newman split graph (Q2) with the 
 
 ### Useful Resources
 
-* Wayne Zachary, ["An Information Flow Model for Conflict and Fission in Small Groups"](http://aris.ss.uci.edu/~lin/76.pdf), 1977 - original paper 
+* Wayne Zachary, ["An Information Flow Model for Conflict and Fission in Small Groups"](https://web.archive.org/web/20191126224623/http://aris.ss.uci.edu/~lin/76.pdf), 1977 - original paper 
 * [Zachary's Karate Club](https://en.wikipedia.org/wiki/Zachary's_karate_club) (Wikipedia)
 * Data 
    * matrix format: [UCINET IV Version 1.0 DATASETS](http://vlado.fmf.uni-lj.si/pub/networks/data/Ucinet/UciData.htm#zachary)
    * GML file: [Gephi Datasets](https://github.com/gephi/gephi/wiki/Datasets)
    * [karate_club_graph()](https://networkx.org/documentation/stable/auto_examples/graph/plot_karate_club.html) in [NetworkX](https://networkx.org/documentation/stable/index.html)
 * Example code
-  * [DATA 440-03 Google Colab notebook](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-9/data_440_03_f22_mod_09_networkx_example.ipynb)
+  * [DATA 440-03 Google Colab notebook](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/week-9/data_440_03_f22_mod_09_networkx_example.ipynb)
   * [CommunityGirvanNewman](https://snap.stanford.edu/snappy/doc/reference/CommunityGirvanNewman.html) in [Snap.py](https://snap.stanford.edu/snappy/doc/tutorial/index-tut.html) 
   * [community_edge_betweenness()](https://igraph.org/python/doc/api/igraph.Graph.html#community_edge_betweenness) in [igraph-python](https://igraph.org/python/) 
   * [edge_betweenness_centrality()](https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.centrality.edge_betweenness_centrality.html#networkx.algorithms.centrality.edge_betweenness_centrality) in [NetworkX](https://networkx.org/)

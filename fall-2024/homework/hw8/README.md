@@ -11,7 +11,7 @@ The goal of this assignment is to cluster Twitter accounts based on the content 
 **Tips for Completing this Assignment:**
 * Your first reference should be the [Module 12 lecture slides](https://docs.google.com/presentation/d/1QK7Of4o0gzYl2e0fSCOXuHlVMNflIUVJ/edit?usp=sharing), class [Colab notebook](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-12/data_440_03_f22_mod_12_pci_ch_03.ipynb), and *Programming Collective Intelligence* book and [Chapter 3 code](https://github.com/arthur-e/Programming-Collective-Intelligence/tree/master/chapter3). *Don't start with a Google search.*
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `hw8_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/homework/hw0/reports.md).  Name your report for this assignment `hw8_report` with the proper file extension.
 
 (**Report (2 points**)
 

@@ -1,5 +1,6 @@
 # Final exam - Email Classification
 **Due:** December 16, 2024 by 11:59pm
+
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
@@ -15,7 +16,7 @@ The goal of this assignment is to classify emails into two groups based on topic
     * [Class Colab notebook](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-13/data_440_03_f22_mod_13_pci_ch_06.ipynb)
     * [*Programming Collective Intelligence* book](https://go.oreilly.com/old-dominion-university/library/view/programming-collective-intelligence/9780596529321/) and [Chapter 6 code](https://github.com/arthur-e/Programming-Collective-Intelligence/tree/master/chapter6)
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `final_exam_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/homework/hw0/reports.md).  Name your report for this assignment `final_exam_report` with the proper file extension.
 
 (**Report (2 points**)
 

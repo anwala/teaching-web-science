@@ -1,10 +1,11 @@
 # Homework 1 - Web Science Intro
 **Due:** September 24, 2024 by 11:59pm
- *Read the entire assignment before starting.*
+
+*Read the entire assignment before starting.*
 
 ## Assignment
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md). Name your report for this assignment `hw1_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/homework/hw0/reports.md). Name your report for this assignment `hw1_report` with the proper file extension.
 
 (**Report (2 points**)
 
@@ -50,7 +51,7 @@ Demonstrate that you know how to use `curl` and are familiar with the available 
 
 a) First, load this URI [https://httpbin.org/user-agent](https://httpbin.org/user-agent) directly in your browser and take a screenshot.  The resulting webpage should show the "User-Agent" HTTP request header that your web browser sends to the web server.
 
-b) In a single `curl` command, issue a `HEAD` HTTP request for the URI, [https://t.co/KSHFYLmmB0](https://t.co/KSHFYLmmB0). Show the HTTP response headers, follow any redirects, and change the User-Agent HTTP request field to "DATA 440."  Show the command you issued and the result of your execution on the command line.  (Either take a screenshot of your terminal or copy/paste into a code segment.)
+b) In a single `curl` command, issue a `HEAD` HTTP request for the URI, [https://t.co/KSHFYLmmB0](https://t.co/KSHFYLmmB0). Show the HTTP response headers, follow any redirects, and change the User-Agent HTTP request field to "DATA 440_691."  Show the command you issued and the result of your execution on the command line.  (Either take a screenshot of your terminal or copy/paste into a code segment.)
 
 Briefly explain the results you get for each of these steps.
 
@@ -79,7 +80,7 @@ Content Length: 18,995,885 bytes
 
 Show that the program works on 3 different URIs, one of which must be https://alexandernwala.com/files/teaching/fall-2022/week-2/2018_wsdl_publications.html, which contains 8 links to PDFs. 
 * Many [W&M DS faculty members](https://www.wm.edu/as/data-science/people/index.php) have a list of their publications in PDF form on their webpages. You may search their webpages for URIs to use.
-* Also, there are a set of pages linked on our [DATA 440 Syllabus](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/syllabus.md) that say "pdf available".  If you follow some of those links, you'll likely find a page that links to at least one PDF.
+* Also, there are a set of pages linked on our [DATA 440/691 Syllabus](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/syllabus.md) that say "pdf available".  If you follow some of those links, you'll likely find a page that links to at least one PDF.
 
 You will likely want to use the BeautifulSoup Python library for this question. Run ``pip3 install beautifulsoup4`` to install BeautifulSoup4. I highly recommend that you install Python packages inside your [Python virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/): 
 ```

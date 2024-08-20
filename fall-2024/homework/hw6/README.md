@@ -1,5 +1,6 @@
 # Homework 6 - Creating (good) social bots
 **Due:** November 19, 2024 by 11:59pm
+
 Read through the entire assignment before starting.  *Do not wait until the last minute to start working on it.* 
 
 ## Assignment
@@ -8,9 +9,9 @@ Social bots have been used to inflate the popularity of political candidates, in
 
 However, not all bots are bad. In this assignment you will prove this point by creating a (good) Twitter bot. You will NOT be scored on the complexity or sophistication of the Twitter bot, instead, you will be scored on the **usefulness** and **originality/innovation** of the bot.
 
-Your Twitter bot must [post tweets](https://github.com/anwala/teaching-web-science/tree/main/fall-2023/week-3/twitter-scraper#example-3-post-a-tweet) on a special Twitter account created by you.
+Your Twitter bot must [post tweets](https://github.com/anwala/teaching-web-science/tree/main/fall-2024/week-3/twitter-scraper#example-3-post-a-tweet) on a special Twitter account created by you.
 
-Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2023/homework/hw0/reports.md).  Name your report for this assignment `hw6_report` with the proper file extension.
+Write a report that contains the answers and *explains how you arrived at the answers* to the following questions. Before starting, review the [HW report guidelines](https://github.com/anwala/teaching-web-science/blob/main/fall-2024/homework/hw0/reports.md).  Name your report for this assignment `hw6_report` with the proper file extension.
 
 
 (**Report (2 points**)

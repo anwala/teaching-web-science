@@ -3,7 +3,7 @@
 The goal of this assignment is to help you practice using simple [Linux commands](https://linuxjourney.com/) on the terminal. From your local Linux terminal or [one of WM's Linux machines](https://www.cs.wm.edu/~tadavis/remoteaccess.html),
 
 ## Q1. (1 point) 
-Create a directory (name it whatever you wish, e.g., `data440`. Change the permissions on this directory so that you are the only user who can read, write, or execute (view the contents) the directory (see ["Protection and Permission"](https://linuxjourney.com/lesson/file-permissions)). Take a screenshot of (or copy/paste) the command and its output into your report.
+Create a directory (name it whatever you wish, e.g., `data440` (or `data691`). Change the permissions on this directory so that you are the only user who can read, write, or execute (view the contents) the directory (see ["Protection and Permission"](https://linuxjourney.com/lesson/file-permissions)). Take a screenshot of (or copy/paste) the command and its output into your report.
 
 ## Q2. (4 points) 
 In the directory that you just created, use a simple text editor (e.g., the nano editor) to create a file named test.txt (`nano test.txt`) with the following contents:
