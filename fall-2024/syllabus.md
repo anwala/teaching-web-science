@@ -162,6 +162,14 @@ Each student must check the class [Piazza (691-03/440-07)](https://piazza.com/cl
 
 Regularly stay involved in class activities. This includes checking Piazza for announcements, submitting assignments on time, and responding to discussion posts in a timely manner.
 
+### Generative AI Use
+
+One of the most important skills you could learn is problem-solving; the ability to go from knowing nothing about a subject, to navigating little or vast amounts of information to address question, and develop an understanding of the subject. This process is not straightforward, sometimes is involves trial and error through experimentation. It can be frustrating and difficult and requires patience and diligence. But developing good problem-solving skills is rewarding and gives you the ability to become an independent researcher who can be entrusted with solving problems.
+
+I believe using generative AI technology to **think** for you, could suppress your problem-solving skills and rob you of the opportunity to develop the cognitive ability to navigate the unknown. So I will not permit using of generative AI as a substitute for your mental process. However, you may use the technology to find information (ensure to verify the accuracy) as long as you note when you use it.
+
+For more details on good and bad use of generative AI, watch [AI can do your homework. Now what?](https://www.youtube.com/watch?v=bEJ0_TVXh-I)
+
 ### Seeking Help
 
 The course Piazza forum should be your first reference for questions about the class. If you have questions about the course requirements or materials, post your questions on Piazza. For extra help, attend [office hours](https://alexandernwala.com/contact/).
