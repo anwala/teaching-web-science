@@ -25,4 +25,4 @@
 |12| Nov 21 &   26  | [Clustering Algorithms](https://docs.google.com/presentation/d/1QK7Of4o0gzYl2e0fSCOXuHlVMNflIUVJ/)                           | [PCI Ch3 (Discovering Groups) code examples](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-12/data_440_03_f22_mod_12_pci_ch_03.ipynb) <br/> [HW8](homework/hw8) - Clustering, Nov 26 -- Dec 5
 |  | Nov 27 -- Dec 1| **NO CLASS - Thanksgiving Break**                                                                                            |
 |13| Dec 3 &      5 | [Document Filtering (Classification)](https://docs.google.com/presentation/d/1j7qEgPjPtf7_5iwMDvdbKXdRHSdYzVUW/)             | [PCI Ch6 (Document Filtering) code examples](https://github.com/anwala/teaching-web-science/blob/main/fall-2022/week-13/data_440_03_f22_mod_13_pci_ch_06.ipynb) <br/> [Final exam](homework/hw9) - Email classification, Dec 5 -- Dec 16
-|  | Dec 6          | *last day of classes*|
+|  | Dec 7          | *last day of classes*|
