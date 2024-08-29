@@ -14,7 +14,7 @@ The Web has fundamentally changed how we learn, play, communicate, and work. Its
 
 ## Course Venue and Time
 
-John E. Boswell Hall, Room 341. Tuesdays/Thursdays 9:30 -– 10:50 am
+Music, Room 217. Tuesdays/Thursdays 9:30 -– 10:50 am
 
 ## Instructor Contact and Office Hours
 
