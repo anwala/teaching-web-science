@@ -14,7 +14,7 @@ The Web has fundamentally changed how we learn, play, communicate, and work. Its
 
 ## Course Venue and Time
 
-John E. Boswell Hall, Room 239. Tuesdays/Thursdays 9:30 -– 10:50 am
+John E. Boswell Hall, Room 341. Tuesdays/Thursdays 9:30 -– 10:50 am
 
 ## Instructor Contact and Office Hours
 
@@ -105,6 +105,20 @@ Attendance and participation are very important, they increase learning and cont
 
 **Final exam** - 10 points
 
+**Graduate students (DATA 691-03), due: Dec 16, 2024**
+
+Graduate students are not expected to complete the last 4 assignments. Instead, they must implement a research project (40% final grade) involving the application of a web science in their respective research areas. Students must negotiate with me to finalize a research topic (& research questions) by October 13, 2024. 
+
+The research project would involve developing software solutions to address pre-defined research questions, a written report, and a presentation. Students would be graded according to their effectiveness (accuracy/completeness) in,
+
+* Data extraction/cleaning: This could also involve cleanup/transformation of the data, deciding what to collect (sample) and what to exclude (ensure to include in report) and saving the data into a machine-readable format (e.g., JSON, CSV).
+
+* Visualization: This task involves implementing high-quality visualization using D3 or another instructor-approved tool, to effectively communicate ideas and findings.
+
+* Analyses: involves generating statistics to understand the data, address research questions, and identify useful insights.
+
+* Final report/Presentation: A single report that summarizes all effort taken to accomplish tasks is required. Reports must be organized and must include code snippets. Github repositories must includes all code, data, and resources used in project. Python scripts must be well-documented (have comments and ReadMes), implemented in modules (uses separate files/functions), and reusable (no hard-coding). The final presentation must be presented effectively to the class, and slides must include images and code snippets to assist explanations.
+
 ### Grading Scale
 
 | Numerical Grade | Letter Grade | | Numerical Grade | Letter Grade |
@@ -164,9 +178,9 @@ Regularly stay involved in class activities. This includes checking Piazza for a
 
 ### Generative AI Use
 
-One of the most important skills you could learn is problem-solving; the ability to go from knowing nothing about a subject, to navigating little or vast amounts of information to address question, and develop an understanding of the subject. This process is not straightforward, sometimes is involves trial and error through experimentation. It can be frustrating and difficult and requires patience and diligence. But developing good problem-solving skills is rewarding and gives you the ability to become an independent researcher who can be entrusted with solving problems.
+One of the most important skills you could learn is problem-solving; the ability to go from knowing nothing about a subject, to navigating little or vast amounts of information to address questions, and develop an understanding of the subject. This process is not straightforward, sometimes it involves trial and error through experimentation. It can be frustrating and difficult and requires patience and diligence. But developing good problem-solving skills is rewarding and gives you the ability to become an independent researcher who can be entrusted with solving problems.
 
-I believe using generative AI technology to **think** for you, could suppress your problem-solving skills and rob you of the opportunity to develop the cognitive ability to navigate the unknown. So I will not permit using of generative AI as a substitute for your mental process. However, you may use the technology to find information (ensure to verify the accuracy) as long as you note when you use it.
+I believe using generative AI technology to **think** for you, could suppress your problem-solving skills and rob you of the opportunity to develop the cognitive ability to navigate the unknown. So I don't permit using generative AI as a substitute for your mental process. However, you may use the technology to find information (ensure to verify the accuracy) as long as you note when you use it.
 
 For more details on good and bad use of generative AI, watch [AI can do your homework. Now what?](https://www.youtube.com/watch?v=bEJ0_TVXh-I)
 
