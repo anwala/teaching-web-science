@@ -112,7 +112,7 @@ with sync_playwright() as playwright:
         get_new_tweet_link = True
 
         #Twitter handle of account where message is to be posted
-        twitter_account = 'xnwala'
+        twitter_account = 'lildarlin0'
 
         #reply_to_link should contain the link (e.g., 'https://twitter.com/xnwala/status/1699844461545836833') to the tweet to be replied to. Leave blank for isolated post
         reply_to_link = ''
