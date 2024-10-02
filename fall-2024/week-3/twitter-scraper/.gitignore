@@ -1,5 +1,6 @@
 *.json
 *.json.gz
 *.txt
+!requirements.txt
 scratch.py
 private
