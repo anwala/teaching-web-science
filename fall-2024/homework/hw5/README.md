@@ -69,6 +69,9 @@ Use D3.js's force-directed graph layout to draw the Karate Club Graph before the
 Use D3.js's force-directed graph layout to draw the Karate Club Graph before the split. Color the nodes according to the factions they belong to (John A or Mr. Hi). After a button is clicked, split the graph based on the original graph split. Include a link to the HTML/JavaScript files (or Observable notebook) in your report and all necessary screenshots.
 * If you load a new file containing the split upon button press, this EC is worth 2 points.
 
+### Q5. *(2 points)*
+In Q2, the edge with the largest betweenness value is deleted first, the edge with the second-largest betweenness is deleted second, and so on. For Q5, repeat Q2 but delete edges randomly and compare the number of iterations it takes to disconnect the networks into 2 connected components when edges are deleted randomly vs. highest betweenness (Q2). Plot the network at each iteration of edge deletion, and compare the connected components produced due to random edge deletion vs. the connected components of the actual split Karate club graph (Q1).
+
 ## Submission
 
 Make sure that you have committed and pushed your local repo to your private GitHub repo (inside the `hw5` folder).  Your repo should include your report, images, code, and data you developed to answer the questions. Include "Ready to grade @anwala" in your final commit message. 
