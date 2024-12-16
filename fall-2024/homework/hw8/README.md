@@ -19,8 +19,8 @@ Write a report that contains the answers and *explains how you arrived at the an
 
 ### Q1 - Find Popular Twitter Accounts (2 point)
 Generate a list of at least 50 popular accounts on Twitter. The accounts must be verified, have 10,000+ followers, and have 5000+ tweets.  For example:
-* [`@acnwala`](https://twitter.com/acnwala) - is not verified, ~440 followers, ~3200 tweets - *don't include*
-* [`@williamandmary`](https://twitter.com/williamandmary) - verified (blue checkmark), 35,000+ followers, 9,000+ tweets - *could include*  
+* [`acnwala`](https://twitter.com/acnwala) - is not verified, ~440 followers, ~3200 tweets - *don't include*
+* [`williamandmary`](https://twitter.com/williamandmary) - verified (blue checkmark), 35,000+ followers, 9,000+ tweets - *could include*  
 
 Generate this information manually by visiting individual account pages. You only need at least 50 popular accounts.
 
