@@ -146,7 +146,7 @@ def get_tweet_ids_user_timeline_page(screen_name, page, max_tweets):
                 continue
 
 
-            if( screen_name != '' and is_retweet is False and tweet_link.lower().startswith(f'/{screen_name}/') is False ):
+            if( screen_name != '' and is_retweet is False and tweet_link.lower().startswith(f'/{screen_name.strip().lower()}/') is False ):
                 #This tweet was authored by someone else, NOT the owner of the timeline, and since it was not retweeted
                 print(f'\tskipping non-{screen_name} (re)tweet, tweet_link: "{tweet_link}"')
                 continue
